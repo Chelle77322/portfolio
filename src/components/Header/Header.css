@@ -1,0 +1,19 @@
+.Header-img{
+    margin-top: auto;
+    padding: 2px;
+    max-height: 15%;
+    max-width: 15%;
+    margin-left:2px; 
+    position: inherit;
+}
+
+.Header-background{
+    margin-top: auto;
+    max-width: 85%;
+    max-height: 15%;
+    background-blend-mode: difference;
+}
+.h1{
+    font-family: 'Limelight', sans-serif;
+  color:#bfe2f0 ;
+  }

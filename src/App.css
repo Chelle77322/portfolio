@@ -1,0 +1,34 @@
+.App {
+text-align: center;
+ margin: auto;
+ padding: 0;
+}
+
+.App-background {
+background-image:url('./background.jpg');
+background-size:cover;
+padding:0;
+margin:0px;
+}
+
+.App-header {
+font-family: 'Limelight', sans-serif;
+color:#bfe2f0 ;
+padding: 0;
+margin:0px;
+background-image:url('./components/banner.jpg');
+background-size: cover;
+
+}
+
+.App-link {
+  color: #61dafb;
+}
+.h1{
+  font-family: 'Limelight', sans-serif;
+color:#bfe2f0 ;
+}
+
+ 
+ 
+
