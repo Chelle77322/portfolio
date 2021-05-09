@@ -1,4 +1,7 @@
 import Header from "./components/Header/Header";
+import Jumbo from "./components/Container/Jumbo";
+import Card from "./components/Container/Card";
+
 import './App.css';
 
 function App() {
@@ -10,7 +13,9 @@ function App() {
     <div className = "App-background">
      
        
-          <h1 className  = "h1">CONTENT GOES HERE</h1>
+      <Jumbo>
+      <Card/>
+      </Jumbo>
       
         
     </div>
