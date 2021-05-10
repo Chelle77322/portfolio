@@ -1,15 +1,17 @@
-import React from 'react';
+import React,  {Component} from 'react';
 import Navigation from  '../components/Navigation/Navigation';
 import Jumbo from '../components/Container/Jumbo';
 import Icon from '../components/Container/Icon';
 import Footer from '../components/Footer/Footer';
 import './src/main.css'
 
-const App = () => (
-    <div>
-   <Navigation/>
-   
-   <Jumbo phrase="Michelle Hall: FullStack Web Developer" subtitle="Leveraging an IT and AV background to build a more intuitive user experience on the web" />
+
+export default class About extends Component {
+  render() {
+    return(
+      <>
+       <Navigation />
+       <Jumbo phrase="Michelle Hall: FullStack Web Developer" subtitle="Leveraging an IT and AV background to build a more intuitive user experience on the web" />
   <h3>About Me</h3>
   <div className = "row">
       <div className = "col-md-6">
@@ -27,6 +29,9 @@ const App = () => (
 
    <Footer/>
   
-   </div>
-);
-export default App;
+</>
+    );
+  }
+}
+
+
