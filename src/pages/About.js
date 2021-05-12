@@ -1,9 +1,8 @@
 import React,  {Component} from 'react';
 import Navigation from  '../components/Navigation/Navigation';
 import Jumbo from '../components/Container/Jumbo';
-import Icon from '../components/Container/Icon';
+//import Icon from '../components/Container/Icon';
 import Footer from '../components/Footer/Footer';
-import './src/main.css'
 
 
 export default class About extends Component {
@@ -19,10 +18,10 @@ export default class About extends Component {
             <p>My aim for each  web development project I work on is to deliver a product to my audience that improves their user experience and productivity.</p>
       </div>
       </div>
-      <div class="row">
-        <div class="medium-4 columns">
-          <h3 class="h3">Work</h3>
-          <p>I thrive in situations that present unique challenges. Whilst most people find it hard to <br>draw comparisions from a varied skill set I find that each and every skill I have acquired can be transfered to each situation.</br>
+      <div className ="row">
+        <div className ="medium-4 columns">
+          <h3 className ="h3">Work</h3>
+          <p>I thrive in situations that present unique challenges. Whilst most people find it hard to draw comparisions from a varied skill set I find that each and every skill I have acquired can be transfered to each situation.
           </p>
 </div>
 </div>

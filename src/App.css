@@ -29,7 +29,9 @@ background-size: cover;
 color:#bfe2f0 ;
 }
 
-
+.row {
+  background-color: aqua;
+}
 
 .rounded-social-buttons {
   text-align: center;
