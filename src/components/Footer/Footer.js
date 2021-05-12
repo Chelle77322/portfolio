@@ -1,7 +1,7 @@
 const Footer = () => (
-    <footer className = "footer">
-        <div className = "container">
-    <p className = "text-muted text-center">&copy; Michelle Hall </p>
+    <footer className = "Footer">
+        <div>
+    <p >&copy; Michelle Hall </p>
         </div>
     </footer>
 
