@@ -18,6 +18,8 @@ padding: 0;
 margin:0px;
 background-image:url('./components/banner.jpg');
 background-size: cover;
+margin-left:40px;
+margin-right:40px;
 
 }
 
