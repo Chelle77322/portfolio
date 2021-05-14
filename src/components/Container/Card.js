@@ -1,47 +1,41 @@
-import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck';
+import React, {Component, PropTypes} from 'react';
+import './Card.css';
 
-
-
-<CardDeck>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-       < small>Text Goes here</small>
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Michelle Hall - FullStack Web Developer</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-  <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
-    <Card.Body>
-      <Card.Title>Card title</Card.Title>
-      <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
-      </Card.Text>
-    </Card.Body>
-    <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
-  </Card>
-</CardDeck>
-export default Card;
+export default class Card extends Component {
+  state = {
+    hover: false,
+  };
+  mouseOver = () => {
+    this.setState({
+      hover: true,
+    });
+  }
+  mouseOut = () => {
+    this.setState({
+      hover: false,
+    });
+  }
+renderImage() {
+  return (
+    <img className = "calloutlarge"
+    role = "presentation"
+    src= {this.props.imageUrl}
+    />
+  );
+}
+renderText() {
+  return (
+    <h2 className = "calloutlarge">
+      {this.props.text}
+    </h2>
+  );
+}
+render(){
+  return(
+    <div className = "hero-section" onMouseOver = {this.mouseOver} onMouseOut = {this.mouseOut}>
+      {this.state.hover ? this.renderText():
+      this.renderImage()}
+    </div>
+  );
+}
+}

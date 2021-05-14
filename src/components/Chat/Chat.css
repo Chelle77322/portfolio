@@ -2,14 +2,15 @@
 .chat {
     width: 300px;
     border: none;
-    border-radius: 15px
+    border-radius: 20px
 }
 
 .rcw-conversation-container > .rcw-header {
-    background-color: red;
+  background-image:linear-gradient(to bottom, #962d49, #53b0ae);
+  background-size: cover;
   }
-  
+
   .rcw-message > .rcw-response {
-    background-color: black;
-    color: white;
+    background-color: #e0ddd1;
+    color: #052542;
   }

@@ -1,0 +1,32 @@
+.nav{
+    background-image:url('/src/images/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto 0;
+    padding:0
+}
+.top-bar,.top-bar-right,.top-bar-left, .menu{
+   color:#962d49;
+    font-size: 20px;
+    font-family: 'Limelight',sans-serif;
+    margin-top: 5px;
+    padding: 5px;
+    border-style: groove;
+    border-radius:20;
+    padding: 15px;
+    scroll-margin-right:10px;
+  
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;    
+}
+.menu-text{
+    font-size:16px;
+    list-style-type: none;
+    display: inline;
+      margin: 0;
+      padding:10px;
+   
+}

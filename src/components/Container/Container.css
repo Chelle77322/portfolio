@@ -1,0 +1,8 @@
+.container-fluid{
+    background-color: orangered;
+    position: sticky;
+    margin: auto;
+    height: fit-content;
+    max-width: 85%;
+
+}

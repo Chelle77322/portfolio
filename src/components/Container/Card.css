@@ -1,10 +1,94 @@
-.text-muted{
-    font-family:"Limelight", "sans-serif";
-    font-style: oblique;
-    font-variant: small-caps;
-    color:#2b2e43;
-}
-.bg{
-    background-color: #afcb80
 
+  .calloutlarge {
+    display: block;
+    float: right;
+    height: 80%;
+    background-image: url("/src/background.jpg");
+    background-size:cover ;
+    background-position: center;
+    color:#f0eeee;
+    font-size: 48px;
+    font-family: 'Limelight',sans-serif;
+
+}
+.hero-section {
+  margin-top:100px;
+ height:85%;
+  text-align: center;
+  display: flex;
+  justify-content:space-around;
+  background-color:#53b0ae;
+} 
+.card-user-container {
+  margin-bottom: 2rem;
+  background-color:#fab472;
+  background-blend-mode: multiply;
+  stop-color: #748684;
+  flood-color: #cbe7e3;
+  
+  color:#cacaca;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 10%;
+  border-color: #918f8f;
+  border-style: groove;
+}
+
+.card-user-container .card-user-avatar .user-image {
+  display: block;
+  margin: auto;
+  width:auto;
+  height:auto;
+  padding: 0.9375rem;
+}
+
+.card-user-container .card-user-avatar .user-image:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card-user-container .card-user-bio {
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-user-container .card-user-bio .location {
+  display: inline-block;
+  margin: 0 0.9375rem;
+  color:#cacaca;
+  font-size: 0.875rem;
+}
+
+.card-user-container .card-user-bio .location-icon,
+.card-user-container .card-user-bio .location-text {
+  display: inline-block;
+  padding: 0 0.3125rem;
+}
+
+.card-user-container .card-user-social {
+  background:#39373b;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-user-container .card-user-social ul {
+  display: inline-block;
+}
+
+.card-user-container .card-user-social ul li {
+  margin: 0 10px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.card-user-container .card-user-social ul li:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card-user-container .card-user-button {
+  text-align: center;
+  padding: 1rem;
 }
