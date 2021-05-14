@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Widget, addResponseMessage, addLinkSnippet, addUserMessage } from 'react-chat-widget';
 import 'react-chat-widget/lib/styles.css';
 import '../components/Chat/Chat.css';
-import weblogo from '../components/Header/logo.gif';
+import weblogo from '../components/Header/logo.mp4';
 const response = "";
 class Chat extends Component {
   componentDidMount() {

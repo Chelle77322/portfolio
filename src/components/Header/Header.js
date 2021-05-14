@@ -1,4 +1,4 @@
-import web_logo from '../Header/logo.gif'
+import web_logo from '../Header/logo.mp4'
 import React, {Component} from 'react';
 
 
