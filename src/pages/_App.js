@@ -1,29 +1,26 @@
 import React, {Component} from 'react';
-//import { NavLink } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-import Jumbo from '../components/Container/Jumbo';
 import Navigation from '../components/Navigation/Navigation';
+
 import Chat from '../pages/Chat_Page';
-
-
-
+import '../stylesheets/App.css';
 
 export default class Apply extends Component {
   render(){
-
-    return(
+ return(
       <>
-      <Header />
-      <Navigation />
-   <Jumbo phrase="Michelle Hall: FullStack Web Developer" subtitle="Leveraging an IT and AV background to build a more intuitive user experience on the web" />   
-  <div>
-        <div>
+   <Header />
+   <Navigation/>
+      
+      <div className = "row">
+       
           {this.props.children}
-        </div>
+          </div> 
+       <Footer/>  
         <Chat />
-      <Footer/>
-      </div>
+     
+      
       </>
     );
   }

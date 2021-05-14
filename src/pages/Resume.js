@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
+import Header from '../components/Header/Header';
 import Navigation from  '../components/Navigation/Navigation';
-import Jumbo from '../components/Container/Jumbo';
+
 //import Icon from '../components/Container/Icon';
 import Footer from '../components/Footer/Footer';
-import '../App.css';
+import '../stylesheets/App.css';
 
 export default class Resume extends Component{
   render(){
  return (
    <>
+ <Header>
    <Navigation />
-   <Jumbo phrase="Michelle Hall: FullStack Web Developer" subtitle="Leveraging an IT and AV background to build a more intuitive user experience on the web" />
+ </Header>
 
      <div className = "card-user-container">
     <div className ="callout large">
@@ -27,15 +29,15 @@ export default class Resume extends Component{
         
         <div className ="medium-4 columns">
           <h3 className ="h3">UI/UX Designer</h3>
-          <p>Passionate about delivering innovative responsive designs to enhance user experience and enjoyment</p>
+          <p>Passionate about delivering responsive designs that enhance user interactivity and experience</p>
         </div>
         <div className="medium-4 columns">
           <h3 class="h3">Front-End Developer</h3>
-          <p>Focusing on writing efficient and adaptable code with a user experience focus with skills in CSS, Bootstrap, Foundation, Ajax, JavaScript, jQuery</p>
+          <p>Enhancing the users experience with fluid intuitive designs highlighting skills in Javascript,JQuery, Heroku, REACT, Foundation and Bootstrap</p>
         </div>
         <div className ="medium-4 columns">
             <h3 class="h3">Back-End Developer</h3>
-            <p>Focusing on delivering functional content management systems through quality back-end development that utilises multiple paradigms with skills in NodeJS, Express, Heroku, MySQL, OOP, ORM, MVC, Handlebars, JSON</p>
+            <p>Focusing on delivering functional content management systems through quality back-end development that utilises multiple paradigms with skills in NodeJS, Express, Heroku, MySQL, OOP, ORM, MVC, Handlebars, JSON, MongoDB</p>
           </div>
         </div>
          
@@ -43,22 +45,18 @@ export default class Resume extends Component{
   
         <div className ="medium-6 columns medium-pull-6">
           <h2 class = "h2">Michelle Hall</h2>
-<blockquote className="blockquote">     
-Full-stack web developer leveraging an IT and AV background to build a more intuitive user
-experience on the web. Recently earnt a certificate in full stack development from the University of
-Adelaide, with newly developed skills in responsive web design.
+<blockquote className="blockquote"> 
+A intuitive UI/UX Full Stack Developer who believes that agility and adaptability are key in developing innovative websites. Recent gradudate of the Full Stack Development course at the University of Adelaide
+
 </blockquote> 
 <blockquote className="blockquote"> 
 Focusing on delivering functional content management systems through quality back-end development that utilises multiple paradigms with skills in NodeJS, Express, Heroku, MySQL, MongoDB, REACT, MVC, Handlebars, JSON, CSS, Bootstrap, Foundation, JavaScript,JQuery, Ajax, Base64.js and Agile Software Development </blockquote>
 
 <blockquote className="blockquote"> 
-Innovative approach towards developing apps, with a focus
-on practicality and future growth. My aim for each web development project I work on is to deliver a
-product to my audience that improves their user experience and productivity.
+Improving user experience and interaction with each and every web development project I work on by delivering 
+apps that are both innovative and practical
 </blockquote>
 <blockquote className="blockquote"> 
-I am highly motivated to help others to gain the skills necessary to achieve their own goals by
-inspiring others to develop long term goals and work systematically towards them.
 A lateral and forward thinker utilizing skills to bring cohesive solutions to the corporate business and
 not-for-profit sectors.
 </blockquote>

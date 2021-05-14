@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Header from '../components/Header/Header';
+import Navigation from '../components/Navigation/Navigation';
+import Card from '../components/Container/Card';
+import Footer from '../components/Footer/Footer';
 
-const Contact = () => {
-
+export default class Contact extends Component{
+render() {
 
   return(
+    <>
+      <Header>
+       <Navigation />
+      
+       </Header>
+<Card>
     <div className ="card-user-container">
 
     <div className ="card-user-avatar">
@@ -26,9 +36,11 @@ const Contact = () => {
       <div className ="card-user-button">
         <a href="https://github.com/Chelle77322/" className="hollow button">FOLLOW</a>
       </div>
-</div>
-    
+</div> 
+</Card>
+ <Footer/>
+ </>   
   );
 };
 
-export default Contact;
+}
