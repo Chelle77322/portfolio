@@ -15,11 +15,14 @@ text-align: center;
   margin-left:12px;
   margin-right:12px;
   padding: 5;
-
+  background-blend-mode: multiply;
 }
 
 .App-link {
-  color: #61dafb;
+  font-family: 'Limelight', sans-serif;
+  font-size: 20px;
+  color: #2b2e43; 
+
 }
 
 .h1{
@@ -96,7 +99,7 @@ text-align: center;
  
 .Footer{
 margin-bottom: 0%;
-position: inherit;
+align-self: baseline center;
 -webkit-margin-bottom-collapse: separate;
  
  
@@ -104,7 +107,7 @@ position: inherit;
 .hero-section{
   margin-top:0;
   width: 85%;
-  height: 25%;
+  height:auto;
  
  }
 .work-feature-block {
@@ -119,3 +122,57 @@ position: inherit;
   padding: 10px 0;
 }
 
+/* Style double up for navigation*/
+.nav{
+  background-image:url('/src/images/banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto 0;
+  padding:0;
+  background-blend-mode: multiply;
+  background-color: #a29e92;
+}
+.top-bar,.top-bar-right,.top-bar-left, .menu{
+  font-family: 'Limelight', sans-serif;
+  font-size: 20px;
+  color: #2b2e43; 
+  margin-top: 5px;
+  padding: 5px;
+  border-style: groove;
+  border-radius:20;
+  padding: 15px;
+  scroll-margin-right:10px;
+
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 10px;    
+}
+.menu-text{
+  font-family: 'Limelight', sans-serif;
+  font-size: 20px;
+  color: #2b2e43; 
+  list-style-type: none;
+  display: inline;
+  margin: 0;
+  padding:10px;
+ 
+}
+.thumbnail{
+  padding: 5px;
+  height:300px;
+  width: 275px;
+
+}
+.thumbnail-profile{
+  padding: 5px;
+  height:auto;
+  width: auto;
+
+}
+.lead{
+  float: inline-end;
+  font-family:'Exo', sans-serif;
+  font-size: 18px;
+}

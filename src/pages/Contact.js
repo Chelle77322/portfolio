@@ -1,23 +1,16 @@
 import React, {Component} from 'react';
-import Header from '../components/Header/Header';
-import Navigation from '../components/Navigation/Navigation';
-import Card from '../components/Container/Card';
-import Footer from '../components/Footer/Footer';
+import '../components/Container/Card.css';
+import '../stylesheets/App.css';
+
 
 export default class Contact extends Component{
 render() {
-
   return(
     <>
-      <Header>
-       <Navigation />
-      
-       </Header>
-<Card>
-    <div className ="card-user-container">
+     <div className ="card-user-container">
 
     <div className ="card-user-avatar">
-      <img  className = "thumbnail"src="./components/images/profile.jpg" alt = "Profile designer"/>
+      <img  className = "thumbnail" src ="../src/components/images/profile.jpg" alt = "Profile designer"/>
      
     <div className ="card-user-bio">
       <h3 className = "h3">Michelle Hall</h3>
@@ -37,8 +30,7 @@ render() {
         <a href="https://github.com/Chelle77322/" className="hollow button">FOLLOW</a>
       </div>
 </div> 
-</Card>
- <Footer/>
+
  </>   
   );
 };
