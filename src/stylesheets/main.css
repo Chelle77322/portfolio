@@ -22,7 +22,7 @@ body {
 .top-bar,.top-bar-right,.top-bar-left, .menu{
     color:#39373b;
     font-size: 16px;
-    font-family: 'Nova Cut',sans-serif;
+    font-family: 'Exo',sans-serif;
    
 }
 .menu-text{
@@ -44,26 +44,26 @@ body {
 }
 .lead{
     float: inline-end;
-    font-family:'Nova Slim', sans-serif;
+    font-family:'Exo', sans-serif;
     font-size: 18px;
 }
 
 .h1{
     padding-top: 15px;
-    font-family:'Nova Cut', sans-serif;
+    font-family:'Limelight', sans-serif;
     font-size: 58px;
     
 }
 .h2{
     padding-top: 15px;
-    font-family:'Nova Cut', sans-serif;
+    font-family:'Limelight', sans-serif;
     font-size: 48px;
     color:#f0eeee;
     
 }
 .h3{
     padding-top: 10px;
-    font-family:'Nova Cut', sans-serif;
+    font-family:'Limelight', sans-serif;
     font-size: 30px;
     color:#f0eeee;
     

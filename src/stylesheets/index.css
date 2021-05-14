@@ -18,9 +18,10 @@ body {
 padding: auto;
 align-content: flex-start;
 content: initial;
-background-color: #a29e92;
+background-image:linear-gradient(to bottom, #962d49, #53b0ae);
+background-size: cover;
 }
 .h1{
 font-family: 'Limelight', sans-serif;
-color:#bfe2f0 ;
+
 }
