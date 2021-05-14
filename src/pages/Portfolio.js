@@ -11,7 +11,7 @@ export default class Portfolio extends Component{
 <Card>
 <div className ="work-feature-block row">
   <div className ="columns medium-7">
-    <a href = "https://github.com/Chelle77322/RESchedule"><img className ="work-feature-block-image" alt = "RESchedule App" src='/components/images/reschedule.jpg'/></a>
+    <a href = "https://github.com/Chelle77322/RESchedule"><img className ="work-feature-block-image" alt = "RESchedule App" src={require("../components/images/reschedule.jpg")}/></a>
  
   </div>
   <div className ="columns medium-5">
@@ -33,7 +33,7 @@ export default class Portfolio extends Component{
 </Card>
        <div className ="work-feature-block row">
           <div className ="columns medium-7">
-            <a href = "https://chelle77322.github.io/Catch-Source-Style/"><img class="work-feature-block-image" alt = "Catch-Source-Style" src="./assets/images/catch.jpg"/></a>
+            <a href = "https://chelle77322.github.io/Catch-Source-Style/"><img class="work-feature-block-image" alt = "Catch-Source-Style" src={require("../components/images/catch.jpg")}/></a>
           </div>
           <div className ="columns medium-5">
             <h3 className ="h3">Catch Source Style</h3>
@@ -72,7 +72,7 @@ export default class Portfolio extends Component{
   
 <div className ="work-feature-block row">
             <div className ="columns medium-7">
-              <a href = "https://github.com/Chelle77322/takeNote/"><img className ="work-feature-block-image"alt = "Take Note"src="./assets/images/Screenshot_1.jpg"/></a>
+              <a href = "https://github.com/Chelle77322/takeNote/"><img className ="work-feature-block-image"alt = "Take Note"src={require("../components/images/notetaker.jpg")}/></a>
             </div>
             <div className ="columns medium-5">
               <h3 className="h3">Take Note</h3>
@@ -93,7 +93,7 @@ export default class Portfolio extends Component{
           
           <div className ="work-feature-block row">
             <div className ="columns medium-7">
-              <a href = "https://chelle77322.github.io/weekly_organiser/index.html"><img className ="work-feature-block-image"alt = "Live Daily Planner"src="./assets/images/scheduler.jpg"/></a>
+              <a href = "https://chelle77322.github.io/weekly_organiser/index.html"><img className ="work-feature-block-image"alt = "Live Daily Planner"src={require("../components/images/scheduler.jpg")}/></a>
             </div>
             <div className ="columns medium-5">
               <h3 className="h3">Daily Planner</h3>

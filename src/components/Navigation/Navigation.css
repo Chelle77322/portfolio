@@ -1,11 +1,15 @@
 .nav{
-    background-image:url("/src/images/banner.jpg");
+background-image:url("/src/images/banner.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-
-  background-blend-mode: multiply;
- 
+ z-index: 0;
+  
+   
 }
+.blended {
+    background-image: url("/src/images/banner.jpg");
+    background-color: -moz-linear-gradient(to bottom right, #962d49, #53b0ae);
+    background-blend-mode:multiply;
+  }
 .top-bar,.top-bar-right,.top-bar-left, .menu{
     font-family: 'Limelight', sans-serif;
     font-size: 20px;
@@ -31,3 +35,4 @@
     padding:10px;
    
 }
+

@@ -10,7 +10,7 @@ render() {
      <div className ="card-user-container">
 
     <div className ="card-user-avatar">
-      <img  className = "thumbnail" src ="../src/components/images/profile.jpg" alt = "Profile designer"/>
+      <img  className = "thumbnail" src={require("../components/images/profile.jpg")} alt = "Profile designer"/>
      
     <div className ="card-user-bio">
       <h3 className = "h3">Michelle Hall</h3>

@@ -7,6 +7,7 @@ text-align: center;
 .App-background {
   background-image:linear-gradient(to bottom, #962d49, #53b0ae);
   background-size: cover;
+  
 }
 
 .Header-background {
@@ -15,8 +16,9 @@ text-align: center;
   margin-left:12px;
   margin-right:12px;
   padding: 5;
-  background-blend-mode: multiply;
+
 }
+
 
 .App-link {
   font-family: 'Limelight', sans-serif;
@@ -124,14 +126,19 @@ align-self: baseline center;
 
 /* Style double up for navigation*/
 .nav{
-  background-image:url('/src/images/banner.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: auto 0;
-  padding:0;
-  background-blend-mode: multiply;
-  background-color: #a29e92;
-}
+  background-image:url("/src/images/banner.jpg");
+    background-size: cover;
+   z-index: 0;
+    
+    background-blend-mode: multiply;
+     
+  }
+  .blended {
+      background-image: url("/src/images/banner.jpg");
+      background-size: cover;
+     
+      background-blend-mode: multiply;
+    }
 .top-bar,.top-bar-right,.top-bar-left, .menu{
   font-family: 'Limelight', sans-serif;
   font-size: 20px;

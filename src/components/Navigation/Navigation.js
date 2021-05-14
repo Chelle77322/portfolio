@@ -4,7 +4,7 @@ import './Navigation.css';
 export default class Navigation extends Component {
     render(){
         return (
-        <div className = "nav">
+        <div className = "nav blended">
         <div className ="top-bar">
           <div className = "top-bar-left">
           <ul className = "menu">

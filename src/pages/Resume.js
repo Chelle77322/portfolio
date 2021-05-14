@@ -9,7 +9,7 @@ export default class Resume extends Component{
 
 <div className ="card-user-container">
         <div className ="card-user-container card-user-avatar user-image">
-          <img className ="thumbnail-profile" src="../components/images/profile.jpg" alt = " Profile of designer"/>
+          <img className ="thumbnail-profile" src={require("../components/images/profile.jpg")} alt = " Profile of designer"/>
         
         <div className ="medium-4 columns">
           <h3 className ="h3">UI/UX Designer</h3>

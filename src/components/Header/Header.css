@@ -5,7 +5,9 @@
     max-width: 20%;
     margin-left: 20px; 
     margin-right: 10px;
-    position: inherit;
+  
+    background-color: -moz-linear-gradient(to bottom right, #962d49, #53b0ae);
+    background-blend-mode: multiply;
 
 }
 
@@ -15,9 +17,15 @@
     margin-left:12px;
     margin-right:12px;
     padding: 5;
-    position: inherit;
+    background-color: -moz-linear-gradient(to bottom right, #962d49, #53b0ae);
+    background-blend-mode:multiply;
+    
     
 }
+.blend{
+  background-color: -moz-linear-gradient(to bottom right, #962d49, #53b0ae);
+    background-blend-mode:multiply;
+  }
 .h1{
     font-family: 'Limelight', sans-serif;
     font-size: 38px;
@@ -28,9 +36,8 @@
 margin-top:0;
    width: 85%;
     height: 25%;
-   background-color: -moz-linear-gradient(bottom right, #962d49, #53b0ae);
+   background-color: -moz-linear-gradient(to bottom right, #962d49, #53b0ae);
   background-image: url('/src/images/banner.jpg');
    background-size: cover;
-   
-   
+ 
   }
