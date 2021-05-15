@@ -3,10 +3,7 @@
     padding: 10px;
     max-height: 35%;
     max-width: 20%;
-    margin-left: 20px; 
-    margin-right: 10px;
-  
-    background-color: -moz-linear-gradient(to bottom right, #962d49, #53b0ae);
+   background-image:linear-gradient(to bottom right, #962d49, #53b0ae);
     background-blend-mode: multiply;
 
 }
@@ -17,8 +14,9 @@
     margin-left:12px;
     margin-right:12px;
     padding: 5;
-    background-color: -moz-linear-gradient(to bottom right, #962d49, #53b0ae);
-    background-blend-mode:multiply;
+    background-image:linear-gradient(to bottom right, #962d49, #53b0ae);
+    background-blend-mode: multiply;
+    align-items: center;
     
     
 }

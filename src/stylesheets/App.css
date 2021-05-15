@@ -7,12 +7,17 @@ text-align: center;
 .App-background {
   background-image:linear-gradient(to bottom, #962d49, #53b0ae);
   background-size: cover;
+  background-blend-mode: multiply;
   
 }
 
 .Header-background {
   background-image: url("/src/images/banner.jpg");
   background-size: cover;
+  
+  background-image:linear-gradient(to bottom, #962d49, #53b0ae);
+  background-size: cover;
+  background-blend-mode: multiply;
   margin-left:12px;
   margin-right:12px;
   padding: 5;
@@ -100,11 +105,18 @@ text-align: center;
 }
  
 .Footer{
-margin-bottom: 0%;
-align-self: baseline center;
--webkit-margin-bottom-collapse: separate;
+  padding: 30px;
+  clear: both;
+  margin-bottom: auto;
+  background-color: #53b0ae;
+  align-self: center;
  
- 
+}
+
+.footer h2 {
+  font-size: 20px;
+  font-family: 'Limelight', sans-serif;
+  color: #2b2e43;
 }
 .hero-section{
   margin-top:0;

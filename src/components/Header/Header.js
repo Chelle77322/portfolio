@@ -1,6 +1,5 @@
-import web_logo from '../Header/logo.mp4'
+import video from '../Header/logo.mp4'
 import React, {Component} from 'react';
-
 
 import '../Header/Header.css';
 
@@ -10,7 +9,9 @@ export default class Header extends Component {
         return (
             <>
             <div className = "Header-background blended">
-            <img src = {web_logo} className = "Header-img blend"alt = "Michelle Hall Web Design"/>
+            <video width="250" height="250" align="center" autoPlay muted>
+            <source src={video} type="video/mp4"/>
+            </video>
            <h1 className = "h1">Developing Intuitive User Experiences</h1>
            </div>
            </>
