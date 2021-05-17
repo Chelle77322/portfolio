@@ -18,7 +18,7 @@ export default class Portfolio extends Component{
     <h3 className ="h3">RESchedule</h3>
     <p>A full stack web based content management system that allows managers of casual and contract work force<br/>
     to facilitate shift allocations based on employee availability</p>
-    <h3 class = "h3">Project Details</h3>
+    <h3 className = "h3">Project Details</h3>
     <ul>
       <li>HTML5 - Responsive Design</li>
       <li>Bulma - CSS Framework</li>
@@ -79,7 +79,7 @@ export default class Portfolio extends Component{
               <p>A simple interactive note taker app that allows you to create, save and edit notes.<br/>
               This app would work simultaneously with the Daily Planner featured below<br/>
               </p>
-              <h3 class = "h3">Project Details</h3>
+              <h3 className = "h3">Project Details</h3>
               <ul>
                 <li>HTML5 - Responsive Design</li>
                 <li>Foundation - CSS Framework</li>
