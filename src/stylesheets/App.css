@@ -14,7 +14,6 @@ text-align: center;
 .Header-background {
   background-image: url("/src/images/banner.png");
   background-size: cover;
-  
   background-image:linear-gradient(to bottom, #962d49, #53b0ae);
   background-size: cover;
   background-blend-mode: multiply;
