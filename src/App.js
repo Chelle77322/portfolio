@@ -7,7 +7,7 @@ import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 
-import '../src/stylesheets/App.css';
+import './stylesheets/App.css';
 
 export default class App extends Component {
   render() {

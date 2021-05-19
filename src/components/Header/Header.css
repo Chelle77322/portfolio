@@ -1,23 +1,22 @@
 .header{
+  color:#a29e92;
   padding: 10px;
   background-image: linear-gradient(to bottom #962d49, #53b0ae);
   background-blend-mode: multiply;
-
-  height: 15%;
+  height: 25%;
 
 }
-.Header-img{
-  height:200px;
+.header-img{
+  height:auto;
   background-size: cover;
   background-image: linear-gradient(to bottom #962d49, #53b0ae);
   background-image:url("/src/images/banner.png");
   background-blend-mode: luminosity;
+  font-family: 'Limelight', sans-serif;
+  font-size: 38px;
+  color: #a29e92;
+  display: justify;
 }
 
 
-.h1{
-    font-family: 'Limelight', sans-serif;
-    font-size: 38px;
-    color: #a29e92;
-    font-display: justify;
-  }
+
