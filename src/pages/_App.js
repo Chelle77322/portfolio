@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation/Navigation';
 
 import Chat from '../pages/Chat_Page';
 import '../stylesheets/App.css';
+import '../stylesheets/Wrapped.css';
 
 export default class Apply extends Component {
   render(){

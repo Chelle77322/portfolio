@@ -1,196 +1,37 @@
-.App {
-text-align: center;
- margin: auto;
- padding: 0;
-}
-
-.App-background {
-  background-image:linear-gradient(to bottom, #962d49, #53b0ae);
-  background-size: cover;
-  background-blend-mode: multiply;
-  
-}
-
-.Header-background {
-  background-image: url("/src/images/banner.png");
-  background-size: cover;
-  background-image:linear-gradient(to bottom, #962d49, #53b0ae);
-  background-size: cover;
-  background-blend-mode: multiply;
-  margin-left:12px;
-  margin-right:12px;
-  padding: 5;
-
-}
-
-
-.App-link {
-  font-family: 'Limelight', sans-serif;
-  font-size: 20px;
-  color: #2b2e43; 
-
-}
-
-.h1{
-  font-family: 'Limelight', sans-serif;
-  font-size: 38px;
-  color: #a29e92;
-  font-display: justify;
-}
-.h3{
-  font-family: 'Limelight', sans-serif;
-  font-size: 20px;
-  color: #2b2e43; 
-}
-
-.row {
-  width: fit-content;
-  height: fit-content;
-}
-
-.rounded-social-buttons {
-  text-align: center;
-}
-
-.rounded-social-buttons .social-button {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  width: 3.125rem;
-  height: 3.125rem;
-  border: 0.125rem solid transparent;
+*{
   padding: 0;
-  text-decoration: none;
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  
+}
+
+.App{
   text-align: center;
-  color:#fefefe;
-  font-size: 1.5625rem;
-  font-weight: normal;
-  line-height: 2em;
-  border-radius: 1.6875rem;
-  transition: all 0.5s ease;
-  margin-right: 0.25rem;
-  margin-bottom: 0.25rem;
-}
-
-.rounded-social-buttons .social-button:hover, .rounded-social-buttons .social-button:focus {
-  -webkit-transform: rotate(360deg);
-      -ms-transform: rotate(360deg);
-          transform: rotate(360deg);
-}
-.rounded-social-buttons .social-button.linkedin {
-  background: #007bb5;
-}
-
-.rounded-social-buttons .social-button.linkedin:before {
-  font-family: "FontAwesome";
-  
-}
-
-.rounded-social-buttons .social-button.linkedin:hover, .rounded-social-buttons .social-button.linkedin:focus {
-  color: #007bb5;
-  background: #fefefe;
-  border-color: #007bb5;
-}
-
-.rounded-social-buttons .social-button.github:before {
-  font-family: "FontAwesome";
-  
-}
-
-.rounded-social-buttons .social-button.github:hover, .rounded-social-buttons .social-button.github:focus {
-  color: #000000;
-  background:#39373b;
-  border-color:#fefefe;
-}
- 
-.Footer{
-  padding: 30px;
-  clear: both;
-  margin-bottom: auto;
-  background-color: #53b0ae;
-  align-self: center;
- 
-}
-
-.footer h2 {
-  font-size: 20px;
   font-family: 'Limelight', sans-serif;
-  color: #2b2e43;
 }
-.hero-section{
-  margin-top:0;
-  width: 85%;
-  height:auto;
- 
- }
-.work-feature-block {
-  padding: 10px 0;
-  border-top: 1px solid #cacaca;
-  border-bottom: 1px solid #cacaca;
+.App-logo {
+  animation: App-logo-spin infinite 40s
+  linear;
+  height: 50vmin;
+  pointer-events: none;
 }
-
-.work-feature-block-image {
-  display: block;
-  margin: auto;
-  padding: 10px 0;
-}
-
-/* Style double up for navigation*/
-.nav{
-  background-image:url("/src/images/banner.jpg");
-    background-size: cover;
-   z-index: 0;
-    
-    background-blend-mode: multiply;
-     
-  }
-  .blended {
-      background-image: url("/src/images/banner.jpg");
-      background-size: cover;
-     
-      background-blend-mode: multiply;
-    }
-.top-bar,.top-bar-right,.top-bar-left, .menu{
-  font-family: 'Limelight', sans-serif;
-  font-size: 20px;
-  color: #2b2e43; 
-  margin-top: 5px;
-  padding: 5px;
-  border-style: groove;
-  border-radius:20;
-  padding: 15px;
-  scroll-margin-right:10px;
-
-  list-style-type: none;
+.App.header {
+  background-image:linear-gradient(to bottom, #962d49 #53b0ae);
+  background-image:url("../images/banner.png");
+  background-size:cover;
+  background-blend-mode: multiply;
   display: flex;
-  justify-content: space-between;
-  margin: 0;
-  padding: 10px;    
+  flex-direction: row;
+  justify-content: center;
 }
-.menu-text{
-  font-family: 'Limelight', sans-serif;
-  font-size: 20px;
-  color: #2b2e43; 
-  list-style-type: none;
-  display: inline;
-  margin: 0;
-  padding:10px;
- 
-}
-.thumbnail{
-  padding: 5px;
-  height:300px;
-  width: 275px;
-
-}
-.thumbnail-profile{
-  padding: 5px;
-  height:auto;
-  width: auto;
-
-}
-.lead{
-  float: inline-end;
-  font-family:'Exo', sans-serif;
-  font-size: 18px;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
