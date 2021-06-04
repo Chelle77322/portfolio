@@ -1,7 +1,7 @@
 import React from "react";
-import Vmarine from "../img/Vmarine.jpg";
-import aguaDeLuz from "../img/aguaDeLuz.png";
-import todo from "../img/todolist.png";
+import Vmarine from "../img/background.jpeg";
+import aguaDeLuz from "../img/background2.jpg";
+import todo from "../img/notetaker.jpg";
 import PropTypes from "prop-types";
 
 export default class Projects extends React.Component {

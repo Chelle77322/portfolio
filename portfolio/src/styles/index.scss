@@ -1,5 +1,5 @@
 @import "~bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Limelight:300,400,700');
 
 
 /*****************STARTS TOP BACKGROUND SECTION***************/
@@ -68,7 +68,7 @@
 
 .background {
     overflow: hidden;
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    background: radial-gradient(ellipse at bottom, #005387 0%, #00d1b2 100%);
     height: 100vh;
 }
 .top-container {
@@ -91,7 +91,7 @@
 .work-button {
     margin-top: 1rem;
     padding: .2rem 2rem;
-    background-color: #f8f9fa;
+    background-color: #830051;
     color: black;
     border-radius: 2rem;
     border: 1px #122444 solid;
@@ -153,7 +153,7 @@
 }
 
 .testbg { 
-    background-image: url("../img/Vmarine.jpg");
+    background-image: url("../img/background.jpeg");
     height: 400px; 
     background-position: center;
     background-repeat: no-repeat;
@@ -161,14 +161,14 @@
 }
 
 .aguabg { 
-    background-image: url("../img/aguaDeLuz.png");
+    background-image: url("../img/background2.jpg");
     height: 400px; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .todobg { 
-    background-image: url("../img/todolist.png");
+    background-image: url("../img/notetaker.jpg");
     height: 400px; 
     background-position: center;
     background-repeat: no-repeat;
