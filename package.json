@@ -8,7 +8,6 @@
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'portfolio/*'\" \"npm run portfolio\"",
     "client": "cd portfolio/portfolio && npm run start",
-    
     "install": "cd portfolio/portfolio && npm install",
     "build": "cd portfolio/portfolio/ && npm run build",
     "heroku-postbuild": "npm run build"
@@ -22,13 +21,12 @@
   "bugs": {
     "url": "https://github.com/Chelle77322/portfolio/issues"
   },
- "devDependencies":{
-   "concurrently": "^4.1.0",
-   "nodemon": "^1.18.7"
-
- },
-
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
+  },
   "dependencies": {
+    "animate.css-react": "^1.1.0",
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "if-env": "^1.0.4",

@@ -10,30 +10,30 @@ export default class Background extends React.Component {
 
 	render() {
 		return (
-			<div id="my-background" className="background">
+			<div id="my-background" className="background" height ="90%" width = "80%" >
 				<div id="stars" />
 				<div id="stars2" />
 				<div id="stars3" />
 				<div className="top-container flex">
 					<h1>
-						Hello, I&apos;m Frank Izquierdo.
+						Welcome, I&apos;m Michelle Hall
 						<br />
 						I&apos;m a Full Stack Web Developer.
 					</h1>
-					{/* offset can be cahnged in node modules wowjs default file */}
+					{/* Change offset in the node_modules wowjs folder*/}
 					<button
 						className={"work-button " + this.props.bounceIn}
-						data-wow-offset="0"
+						data-wow-offset="1"
 						onClick={() => {
 							let node = document.getElementById(
 								this.props.aboutRef.current.props.id
 							);
-							window.scrollTo({
+							window.Document({
 								top: node.offsetTop,
-								behavior: "smooth"
+								behavior: "auto"
 							});
 						}}>
-						View my work
+						Let's take a look through
 					</button>
 				</div>
 			</div>
@@ -43,5 +43,5 @@ export default class Background extends React.Component {
 
 Background.propTypes = {
 	aboutRef: PropTypes.object,
-	bounceIn: PropTypes.string
+	fadeInLeft: PropTypes.string
 };

@@ -1,18 +1,23 @@
 /* eslint-disable no-undef */
 import React from "react";
+import PropTypes from "prop-types";
 import reschedule from "../img/reschedule.jpg";
 import budgetary from "../img/budgetary.jpg";
 import directory from "../img/directory.jpg";
 import catchs from "../img/catch.jpg";
 import profile from "../img/profile.jpg";
 //import scheduler from "../img/scheduler.jpg";
+import WOW from "wowjs";
 
 export default class About extends React.Component {
+	componentDidMount() {
+		new WOW.WOW().init();
+	}
 	render() {
 		return (
 			<div id="about-container"
 	className="content-containers container text-center mt-5">
-	<h1 id="about" className={this.props.bounceLeft}>
+	<h1 id="about" className={this.props.fadeInLeft}>
 	About
 		</h1>
 		<div className="row mt-5">
@@ -52,8 +57,8 @@ export default class About extends React.Component {
 							alt=""
 							style={{
 								borderRadius: 50 + "%",
-								height: 250 + "px",
-								width: 250 + "px"
+								height: 75 + "%",
+								width: 75 + "%"
 							}}
 						/>
 						<p className={"mytext pt-3 " + this.props.fadeIn}>

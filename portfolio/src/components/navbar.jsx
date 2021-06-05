@@ -3,6 +3,7 @@ import Background from "./background.jsx";
 import About from "./about.jsx";
 import Projects from "./projects.jsx";
 import Contact from "./contact.jsx";
+import Footer from './footer.jsx';
 
 import WOW from "wowjs";
 
@@ -47,57 +48,40 @@ render() {
 					ref={this.navEffect}
 					id="my-background"
 					aboutRef={this.about}
-					bounceIn={"wow bounceIn"}
+					fadeIn={"wow fadeIn"}
 				/>
 				<nav
 					id="navbar"
 					className="navbar navbar-expand-lg navbar-light bg-light">
-					<div className="container">
-						<a
-							className="home-style navbar-brand"
-							onClick={() => {
+				<div className="container">
+					<a href className="home-style navbar-brand"
+						onClick={() => {
 								window.scrollTo({
 									top: 0,
 									behavior: "smooth"
 								});
 							}}>
-							Back to Space
 						</a>
-						<button
-							className="navbar-toggler"
-							type="button"
-							data-toggle="collapse"
-							data-target="#navbarNavAltMarkup"
-							aria-controls="navbarNavAltMarkup"
-							aria-expanded="false"
-							aria-label="Toggle navigation">
-							<span className="navbar-toggler-icon" />
-						</button>
-						<div
-							className="collapse navbar-collapse"
-							id="navbarNavAltMarkup">
-							<div className="navbar-nav">
-								<a
-									onClick={() => {
-										this.scrolling(this.about);
-									}}
-									className="btn-style nav-item nav-link">
-									About
-								</a>
-								<a
+				<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span className="navbar-toggler-icon" /></button>
+						
+					<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div className="navbar-nav">
+						<a href onClick={() => {
+							this.scrolling(this.about);
+							}}
+						className="btn-style nav-item nav-link"> About</a>
+								<a href
 									onClick={() => {
 										this.scrolling(this.projects);
 									}}
 									className="btn-style nav-item nav-link">
 									Projects
 								</a>
-								<a
-									onClick={() => {
-										this.scrolling(this.contact);
-									}}
-									className="btn-style nav-item nav-link">
-									Contact
-								</a>
+			<a href onClick={() => { this.scrolling(this.contact);}}
+				className="btn-style nav-item nav-link">Contact</a>
 							</div>
 						</div>
 					</div>
@@ -106,11 +90,11 @@ render() {
 				<About
 					ref={this.about}
 					id="about-container"
-					bounceLeft={"wow bounceInLeft"}
+					fadeOutRight={"wow fadeOutRight"}
 					fadeInLeft={"wow fadeInLeft"}
 					fadeInRight={"wow fadeInRight"}
 					fadeIn={"wow fadeIn"}
-					tada={"wow fadeIn"}
+					tada={"wow swing"}
 				/>
 				<Projects
 					ref={this.projects}
