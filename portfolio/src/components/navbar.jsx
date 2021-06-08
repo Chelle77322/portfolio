@@ -1,8 +1,8 @@
 import React from "react";
 import Background from "./background.jsx";
-import About from "./about.jsx";
-import Projects from "./projects.jsx";
-import Contact from "./contact.jsx";
+import About from "../components/About/about";
+//import Projects from "../components/Projects/projects";
+import Contact from "../components/Resume/contact";
 import Footer from './footer.jsx';
 
 import WOW from "wowjs";
@@ -96,12 +96,12 @@ render() {
 					fadeIn={"wow fadeIn"}
 					tada={"wow swing"}
 				/>
-				<Projects
+				{/*<Projects
 					ref={this.projects}
 					id="my-projects"
 					fadeInRight={"wow fadeInRight"}
 					fadeIn={"wow fadeIn"}
-				/>
+				/>*/}
 				<Contact
 					ref={this.contact}
 					id="my-contact"

@@ -1,8 +1,8 @@
 import React from "react";
 
-import gmail from "../img/gmail.png"
-import github from "../img/github.png";
-import linkedin from "../img/linkedin.png";
+//import gmail from "../img/gmail.png"
+//import github from "../img/github.png";
+//import linkedin from "../img/linkedin.png";
 
 class Footer extends React.Component {
 	render() {
@@ -12,15 +12,15 @@ class Footer extends React.Component {
 					<div className="row">
 						<div className="col-12 col-sm-12 col-md-8 mx-auto">
 						<a href="mailto:serenynadarra@gmail.com">
-								<img className="img-fluid" src={gmail} alt="Gmail"height = "25%" width = "20%"/>
+								{/*<img className="img-fluid" src={gmail} alt="Gmail"height = "25%" width = "20%"/>*/}
 							</a>
 	<a className="px-3" href="https://github.com/Chelle77322/" target="_blank"
 								rel="noopener noreferrer">
-								<img src={github} alt="Github" height = "75%" width = "12%"/>
+								{/*<img src={github} alt="Github" height = "75%" width = "12%"/>*/}
 							</a>
 	<a href="https://www.linkedin.com/in/michelle-hall-08021434/" target="_blank"
 	rel="noopener noreferrer">
-	<img src={linkedin} alt="LinkedIn" height = "75%" width = "12%"/> </a>
+	{/*<img src={linkedin} alt="LinkedIn" height = "75%" width = "12%"/>*/} </a>
 		</div>
 		</div>
 					<h5 className="pt-4">Michelle Hall &copy; 2021</h5>

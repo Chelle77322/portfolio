@@ -28,7 +28,7 @@ export default class Background extends React.Component {
 							let node = document.getElementById(
 								this.props.aboutRef.current.props.id
 							);
-							window.Document({
+							window.scroll({
 								top: node.offsetTop,
 								behavior: "auto"
 							});

@@ -15,7 +15,7 @@ export const Colors = {
       primary: "#62A461",
     },
     background3: {
-      background: "00d1b2",
+      background: "#00d1b2",
       text: "#300584",
       primary: "#300584",
     },
