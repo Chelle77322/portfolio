@@ -2,33 +2,32 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import profile from "../../assets/profile.jpg";
 //import Particle from "../Particle";
-import overhome from "./overhome.jsx";
-import Typer from "./typer";
+//import overhome from "./overhome.jsx";
+import "../../styles/typewriter.css";
+import "../../styles/styles.scss"
+
 
 function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
-        {/*<Particle />*/}
+      <Container fluid className=" main.tdbc-container" id="home">
+        
         <Container className="home-content">
           <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There! <span className="wave">👩‍🦱 </span>
-              </h1>
-
-              <h1 className="heading-name">
-                Meet the full stack web developer
-                <strong className="main-name"> Michelle Hall</strong>
-              </h1>
-
-              <div style={{ padding: 50, textAlign: "left" }}>
-                <Typer />
-              </div>
+            <Col md={7} className="home-header bar six">
+             
+              
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img src={profile} alt="home pic" className="img-fluid" />
+            <Col md={100} style={{ paddingBottom:100 }} className = "typewriter h1 wrapper bar six">
+            <div className ="home-header typewriter h1">
+            <h1 style={{ paddingBottom: 5 }} className="heading">
+               Full Stack Web Developer.....</h1>
+              
+              </div>
+              <div style={{ padding: 50, textAlign: "center" }}>
+               
+              </div>
             </Col>
           </Row>
         </Container>

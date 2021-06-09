@@ -1,28 +1,28 @@
 import React from "react";
-import Background from "./background.jsx";
-import About from "../components/About/about";
+//import Background from "./background.jsx";
+//import About from "../components/About/about";
 //import Projects from "../components/Projects/projects";
-import Contact from "../components/Resume/contact";
-import Footer from './footer.jsx';
+//import Contact from "../components/Resume/contact";
+//import Footer from './footer.jsx';
 
 import WOW from "wowjs";
 
 class Navbar extends React.Component {
-  constructor(props){
-    super(props);
-    this.about = React.createRef();
-    this.projects = React.createRef();
-    this.contact = React.createRef();
-    this.scrolling = this.scrolling.bind(this);
-  }
+  //constructor(props){
+   // super(props);
+    //this.about = React.createRef();
+    //this.projects = React.createRef();
+    //this.contact = React.createRef();
+    //this.scrolling = this.scrolling.bind(this);
+  //}
   componentDidMount(){
     new WOW.WOW().init();
   }
   navEffect(){
     window.addEventListener("scroll", () => {
-      var navBar = document.getElementById("navbar");
+      var navBar = document.getElementById("navbar wrapper bar six");
       var domRect = navBar.getBoundingClientRect();
-      var myBackground = document.getElementById("my-background");
+      var myBackground = document.getElementById("wrapper bar six");
       var domBGRect = myBackground.getBoundingClientRect();
 
       if(domRect.y <= -domRect.height){
@@ -43,16 +43,16 @@ scrolling(instance){
 }
 render() {
   return(
-    <div>
-      <Background
-					ref={this.navEffect}
+    <div> 
+      {/*<Background
+			ref={this.navEffect}
 					id="my-background"
 					aboutRef={this.about}
 					fadeIn={"wow fadeIn"}
-				/>
-				<nav
+      />*/}
+      <nav
 					id="navbar"
-					className="navbar navbar-expand-lg navbar-light bg-light">
+					className="navbar navbar-expand-lg navbar-light bg-light blend">
 				<div className="container">
 					<a href className="home-style navbar-brand"
 						onClick={() => {
@@ -86,8 +86,10 @@ render() {
 						</div>
 					</div>
 				</nav>
+      <div className = "tdbc-hero blend"></div>
+				
 
-				<About
+			{/*	<About
 					ref={this.about}
 					id="about-container"
 					fadeOutRight={"wow fadeOutRight"}
@@ -95,19 +97,19 @@ render() {
 					fadeInRight={"wow fadeInRight"}
 					fadeIn={"wow fadeIn"}
 					tada={"wow swing"}
-				/>
+				/>*/}
 				{/*<Projects
 					ref={this.projects}
 					id="my-projects"
 					fadeInRight={"wow fadeInRight"}
 					fadeIn={"wow fadeIn"}
 				/>*/}
-				<Contact
+				{/*<Contact
 					ref={this.contact}
 					id="my-contact"
 					fadeInLeft={"wow fadeInLeft"}
 					shake={"wow pulse"}
-				/>
+                />*/}
       
     </div>
   );

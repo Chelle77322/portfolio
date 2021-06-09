@@ -1,8 +1,8 @@
 .tdbc-content-maxlength {
-    max-width: 80ch;
+    max-width: 75ch;
   }
   
-  $tdbc-alignments: left, center, right !default;
+  $tdbc-alignments: left, center, right, justify !default;
   
   @each $alignment in $tdbc-alignments {
     .tdbc-text-align--#{$alignment} {

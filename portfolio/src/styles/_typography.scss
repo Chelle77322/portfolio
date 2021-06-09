@@ -15,25 +15,25 @@ $tdbc-typography-variants: h1, h2, h3, h4;
 h1,
 .tdbc-h1 {
   font-size: $tdbc-h1-font-size;
-  font-size: unquote("min(max(3rem, 5vw), #{$tdbc-h1-font-size})");
-  text-align: center;
+  font-size: unquote("min(max(4rem, 6vw), #{$tdbc-h1-font-size})");
 }
 
 h2,
 .tdbc-h2 {
   font-size: $tdbc-h2-font-size;
-  font-size: unquote("min(max(2.5rem, 5vw), #{$tdbc-h2-font-size})");
+  font-size: unquote("min(max(3rem, 5vw), #{$tdbc-h2-font-size})");
 }
 
 h3,
 .tdbc-h3 {
   font-size: $tdbc-h3-font-size;
+  font-size: unquote("min(max(2rem, 4vw), #{$tdbc-h2-font-size})");
 }
 
 h4,
 .tdbc-h4 {
   font-size: $tdbc-h4-font-size;
-  color: tdbc-color("secondary");
+  color: tdbc-color("gray");
 }
 
 p,
@@ -43,7 +43,6 @@ li {
 
 p {
   margin: 0 0 1rem;
-  text-align: center;
 }
 
 article {
@@ -75,7 +74,7 @@ a:not(.tdbc-button) {
 
 pre,
 code {
-  font-family: Consolas, Monaco, "Ballet", "Ballet", monospace;
+  font-family: "Cabin Sketch", "sans-serif";
   font-weight: bold;
 }
 
@@ -84,8 +83,8 @@ code {
   padding: 0.15em;
   background-color: tdbc-color("light");
   font-size: 0.75em;
-  color: tdbc-color("secondary");
-  border: 1px solid scale-color(tdbc-color("secondary"), $lightness: 50%);
+  color: tdbc-color("#5e081e");
+  border: 1px solid scale-color(tdbc-color("gray"), $lightness: 50%);
   border-radius: 2px;
   line-height: 1.1;
 }
@@ -109,7 +108,7 @@ blockquote {
   margin-right: 0;
   padding-left: 1.5rem;
   border-left: 2px solid tdbc-color("secondary");
-  color: tdbc-color("secondary");
+  color: tdbc-color("gray");
 
   &,
   p {
