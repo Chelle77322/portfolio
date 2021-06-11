@@ -1,6 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+
 import Carousel from "./carousel";
+import carouselContainer from "./carousel";
 
 
 export default class Project{
@@ -10,7 +11,9 @@ export default class Project{
             <div className = "background">
                 <h1 className = "h1"> Latest Projects</h1>
                 <div>
-                    <Carousel />
+                    <Carousel>
+                 <carouselContainer/>
+                    </Carousel>
 
                    
             </div>

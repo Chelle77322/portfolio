@@ -1,28 +1,25 @@
 import React from "react";
-//import Background from "./background.jsx";
-//import About from "../components/About/about";
-//import Projects from "../components/Projects/projects";
-//import Contact from "../components/Resume/contact";
+import About from "../About/About";
+import Projects from "../Projects/project";
+import Contact from "../Contact/Contact";
+
 //import Footer from './footer.jsx';
 
-import WOW from "wowjs";
 
 class Navbar extends React.Component {
-  //constructor(props){
-   // super(props);
-    //this.about = React.createRef();
-    //this.projects = React.createRef();
-    //this.contact = React.createRef();
-    //this.scrolling = this.scrolling.bind(this);
-  //}
-  componentDidMount(){
-    new WOW.WOW().init();
+  constructor(props){
+   super(props);
+    this.About = React.createRef();
+    this.Projects = React.createRef();
+    this.Contact = React.createRef();
+    this.scrolling = this.scrolling.bind(this);
   }
+  
   navEffect(){
     window.addEventListener("scroll", () => {
       var navBar = document.getElementById("navbar wrapper bar six");
       var domRect = navBar.getBoundingClientRect();
-      var myBackground = document.getElementById("wrapper bar six");
+      var myBackground = document.getElementById("tdbc-main");
       var domBGRect = myBackground.getBoundingClientRect();
 
       if(domRect.y <= -domRect.height){
@@ -44,72 +41,58 @@ scrolling(instance){
 render() {
   return(
     <div> 
-      {/*<Background
-			ref={this.navEffect}
-					id="my-background"
-					aboutRef={this.about}
-					fadeIn={"wow fadeIn"}
-      />*/}
-      <nav
-					id="navbar"
-					className="navbar navbar-expand-lg navbar-light bg-light blend">
-				<div className="container">
-					<a href className="home-style navbar-brand"
-						onClick={() => {
-								window.scrollTo({
-									top: 0,
-									behavior: "smooth"
-								});
-							}}>
+<nav id ="navbar" className="navbar navbar-expand-lg navbar-light bg-light blend">
+<div className="container">
+<a href className="home-style navbar-brand" onClick={() => {
+					window.scrollTo({ top: 0,behavior: "smooth"});}}> 
 						</a>
-				<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-				aria-controls="navbarNavAltMarkup" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span className="navbar-toggler-icon" /></button>
-						
-					<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div className="navbar-nav">
-						<a href onClick={() => {
-							this.scrolling(this.about);
-							}}
-						className="btn-style nav-item nav-link"> About</a>
-								<a href
-									onClick={() => {
-										this.scrolling(this.projects);
-									}}
-									className="btn-style nav-item nav-link">
-									Projects
-								</a>
-			<a href onClick={() => { this.scrolling(this.contact);}}
-				className="btn-style nav-item nav-link">Contact</a>
-							</div>
-						</div>
-					</div>
-				</nav>
-      <div className = "tdbc-hero blend"></div>
-				
-
-			{/*	<About
-					ref={this.about}
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">About</button>
+						<a href onClick={() => {this.scrolling(this.about);}}>
+						</a>
+                        </div>
+                        </div>
+                  
+					<div className="navbar-nav">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">Projects</button>
+						<a href onClick={() => {this.scrolling(this.Projects);}}>
+						</a>
+                        </div>
+                        
+               
+                        <div className="navbar-nav">
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+				aria-controls="navbarNavAltMarkup" aria-expanded="false"
+				aria-label="Toggle navigation">Contact</button>
+						<a href onClick={() => {this.scrolling(this.Contact);}}>
+						</a>
+                        </div>
+						
+					</div>	
+                    </nav>
+    
+				<About
+					ref={this.About}
 					id="about-container"
-					fadeOutRight={"wow fadeOutRight"}
-					fadeInLeft={"wow fadeInLeft"}
-					fadeInRight={"wow fadeInRight"}
-					fadeIn={"wow fadeIn"}
-					tada={"wow swing"}
-				/>*/}
-				{/*<Projects
-					ref={this.projects}
+                    className = "tdbc-main"
+				
+				/>
+				<Projects
+					ref={this.Projects}
 					id="my-projects"
-					fadeInRight={"wow fadeInRight"}
-					fadeIn={"wow fadeIn"}
-				/>*/}
-				{/*<Contact
-					ref={this.contact}
+         className = "tdbc-main"
+					
+				/>
+			    <Contact
+					ref={this.Contact}
 					id="my-contact"
-					fadeInLeft={"wow fadeInLeft"}
-					shake={"wow pulse"}
-                />*/}
+					className = "tdbc-main"
+                />
       
     </div>
   );

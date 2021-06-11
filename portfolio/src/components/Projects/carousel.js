@@ -1,20 +1,18 @@
-/************************************
-1. If you want to add or remove items you will need to change a variable called $slide-count in the CSS *minimum 3 slides
+/* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, {Component} from "react";
+import ReactDom from "react-dom";
 
-2. if you want to change the dimensions of the slides you will need to edit the slideWidth variable here 👇 and the $slide-width variable in the CSS.
-************************************/
+const carouselContainer = document.querySelector(".carousel-container");
 
-import React, {useState, useEffect} from "react";
-
-
-const slideWidth = 30;
-
-const _items = [
+//Data for carousel
+const carouselSlidesData = [
     {
         project: {
             title: "Catch Style Source",
             desc: 'A style selection website for the beginner web developer',
             image: "assets/projects/catch.jpg",
+            
             
         },
        
@@ -46,138 +44,126 @@ const _items = [
             desc: "An employment shift scheduling app for managers of casual and contract workers",
             image: "../assets/projects/reschedule.jpg",
         },
-    },
-];
-
-const length = _items.length;
-_items.push(..._items);
-
-// eslint-disable-next-line no-unused-vars
-const sleep = (ms = 0) => {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-};
-
-const createItem = (position, idx) => {
-    const item = {
-        styles: {
-            transform: `translateX(${position * slideWidth}rem)`,
-        },
-        player: _items[idx].player,
-    };
-
-    switch (position) {
-        case length - 1:
-        case length + 1:
-            item.styles = {...item.styles, filter: 'grayscale(1)'};
-            break;
-        case length:
-            break;
-        default:
-            item.styles = {...item.styles, opacity: 0};
-            break;
     }
 
-    return item;
-};
-
-const CarouselSlideItem = ({pos, idx, activeIdx}) => {
-    const item = createItem(pos, idx, activeIdx);
-
-    return (
-        <li className="carousel__slide-item" style={item.styles}>
-            <div className="carousel__slide-item-img-link">
-                <img src={item.player.image} alt={item.player.title} />
-            </div>
-            <div className="carousel-slide-item__body">
-                <h4>{item.player.title}</h4>
-                <p>{item.player.desc}</p>
-            </div>
-        </li>
-    );
-};
-
-const keys = Array.from(Array(_items.length).keys());
-
-export default class Carousel{
+];
+class CarouselLeftArrow extends Component {
+    render() {
+        return(
+            <a href ="#" className = "carousel_arrow carousel_arrow--left"
+            onClick={this.props.onClick}>
+                <span className = "fa fa 2x fa-angle-left"/>
+            </a>
+        );
+    }
+} 
+class CarouselRightArrow extends Component {
+    render (){
+        return (
+            <a href = "#"
+            className = "carousel_arrow carousel_arrow--right"
+            onClick={this.props.onClick}>
+                <span className = "fa fa-2x fa-angle-right"/>
+            </a>
+        );
+    }
+} 
+class CarouselIndicator extends Component{
     render(){
-     const Carousel = (props) => {
-    const [items, setItems] = useState(keys);
-    const [isTicking, setIsTicking] = useState(false);
-    // eslint-disable-next-line no-unused-vars
-    const [activeIdx, setActiveIdx] = useState(0);
-    const bigLength = items.length;
-
-    const prevClick = (jump = 1) => {
-        if (!isTicking) {
-            setIsTicking(true);
-            setItems((prev) => {
-                return prev.map((_, i) => prev[(i + jump) % bigLength]);
-            });
-        }
-    };
-
-    const nextClick = (jump = 1) => {
-        if (!isTicking) {
-            setIsTicking(true);
-            setItems((prev) => {
-                return prev.map(
-                    (_, i) => prev[(i - jump + bigLength) % bigLength],
-                );
-            });
-        }
-    };
-
-    const handleDotClick = (idx) => {
-        if (idx < activeIdx) prevClick(activeIdx - idx);
-        if (idx > activeIdx) nextClick(idx - activeIdx);
-    };
-
-    //React.useEffect(() => {
-    //    if (isTicking) sleep(300).then(() => setIsTicking(false));
-   // }, [isTicking]);
-
-    //React.useEffect(() => {
-    //    setActiveIdx((length - (items[0] % length)) % length) // prettier-ignore
-   // }, [items]);
-    
-    return (
-        <div className="carousel__wrap">
-            <div className="carousel__inner">
-                <button className="carousel__btn carousel__btn--prev" onClick={() => prevClick()}>
-                    <i className="carousel__btn-arrow carousel__btn-arrow--left" />
-                </button>
-                <div className="carousel__container">
-                    <ul className="carousel__slide-list">
-                        {items.map((pos, i) => (
-                            <CarouselSlideItem
-                                key={i}
-                                idx={i}
-                                pos={pos}
-                                activeIdx={activeIdx}
-                            />
-                        ))}
-                    </ul>
-                </div>
-                <button className="carousel__btn carousel__btn--next" onClick={() => nextClick()}>
-                    <i className="carousel__btn-arrow carousel__btn-arrow--right" />
-                </button>
-                <div className="carousel__dots">
-                    {items.slice(0, length).map((pos, i) => (
-                        <button
-                            key={i}
-                            onClick={() => handleDotClick(i)}
-                            className={i === activeIdx ? 'dot active' : 'dot'}
-                        />
-                    ))}
-                </div>
-            </div>
-        </div>
-              );
-                    }       
-                
-};
-
+        return(
+            <li>
+                <a className = {this.props.index === this.props.activeIndex ? "carousel_indicator carousel_indicator--active": "carousel_indicator"}
+                onClick={this.props.onClick}/>
+            </li>
+        );
+    }
 }
+class CarouselSlide extends Component {
+    render() {
+        return (
+            <li className = {this.props.index === this.props.activeIndex? "carousel_slide carousel_slide--active": "carousel_slide"}>
+                <div className = "carousel-slide_content">
+                    {this.props.slide.project}
+                </div>
+            </li>
+        );
+    }
+}
+//Wraps the Carousel Component all together
+class Carousel extends Component {
+    constructor(props){
+        super(props);
+    this.goToSlide = this.goToSlide.bind(this);
+    this.goToPrevSlide = this.goToPrevSlide.bind(this);
+    this.goToNextSlide = this.goToNextSlide.bind(this);
 
+    this.state = {
+        activeIndex: 0
+    };
+    }
+    gotToSlide(index){
+        this.setState({
+            activeIndex: index
+        });
+    }
+    goToPrevSlide(event){
+        event.preventDefault();
+        let index = this.state.activeIndex;
+        let { slides } = this.props;
+        let slidesLength = slides.length;
+        if (index <1){
+            index = slidesLength;
+        }
+        --index;
+        this.setState ({
+            activeIndex: index
+        });
+    }
+    goToNextSlide(event){
+        event.preventDefault();
+        let index = this.state.activeIndex;
+        let { slides } = this.props;
+        let slidesLength = slides.length -1;
 
+        if(index === slidesLength){
+            index = -1;
+        }
+    ++index;
+    this.setState({
+        activeIndex: index
+    });
+}
+render () {
+    return (
+        <div className = "carousel">
+            <CarouselLeftArrow onClick = {event => this.goToPrevSlide(event)}/>
+            <ul className = "carousel_slides">
+                {this.props.slides.map((slide, index)=>
+                <CarouselSlide
+                key= {index}
+                index = {index}
+                activeIndex = {this.state.activeIndex}
+                slide = {slide}/>
+                )}
+            </ul>
 
+            <CarouselRightArrow onClick = {event => this.goToNextSlide(event)} />
+            <ul className = "carousel_indicators">
+                {this.props.slides.map((slide, index) =>
+                <CarouselIndicator
+                key={index}
+                index={index}
+                activeIndex={this.state.activeIndex}
+                isActive={this.state.activeIndex === index}
+                onClick={event => this.goToSlide(index)}/>
+                )}
+            </ul>
+        </div>
+    );
+}
+}
+//Renders the Carousel Component
+ReactDom.render(<Carousel slides = {carouselSlidesData}/>,
+    carouselContainer);
+
+    export default Carousel;

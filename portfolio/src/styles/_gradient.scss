@@ -27,7 +27,8 @@ $list4: $primary, $secondary, $tertiary, $primary, $secondary, $tertiary, $prima
 .wrapper {
   position: relative;
   overflow: hidden;
-  width: 500px;
+  width: auto;
+  height: auto;
   margin: 0 auto;
 }
 
