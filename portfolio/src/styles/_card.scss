@@ -2,9 +2,9 @@
     display: flex;
     position: relative;
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     border-radius: $tdbc-border-radius;
-    background-color: #fff;
+   
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
   
     &__title {
@@ -65,7 +65,7 @@
     }
   
     &:hover a.tdbc-card__title::before {
-      box-shadow: 0 0 0 3px tdbc-color("primary");
+      box-shadow: 0 0 0 3px tdbc-color("text");
     }
   
     img:first-child {

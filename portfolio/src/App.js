@@ -2,9 +2,10 @@ import React, {useState, useEffect} from "react";
 import Projects from "./components/Projects/project";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
-import Navbar from "./components/Navigation/navbar";
+import Navigate from "./components/Navigation/navbar";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/footer";
+
 
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Preloader from "./components/Pre";
@@ -19,8 +20,8 @@ const [load, updateLoad] = useState(true);
    return (
    <Router>
      <Preloader load = {load} />
-     <Navbar />
-   <div className = "main.tdbc-container" id = {load ? "no-scroll": "scroll"}>
+     <Navigate />
+   <div className = " hr six" id = {load ? "no-scroll": "scroll"}>
      
    <Switch>
      <Route path = "/Projects" component = {Projects}/>

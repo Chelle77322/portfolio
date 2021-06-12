@@ -1,4 +1,4 @@
-$tdbc-typography-variants: h1, h2, h3, h4;
+$tdbc-typography-variants: h1, h2, h3, h4, blockquote, p;
 
 @each $type in $tdbc-typography-variants {
   #{$type},
@@ -16,24 +16,27 @@ h1,
 .tdbc-h1 {
   font-size: $tdbc-h1-font-size;
   font-size: unquote("min(max(4rem, 6vw), #{$tdbc-h1-font-size})");
+  color: tdbc-color("text");
 }
 
 h2,
 .tdbc-h2 {
   font-size: $tdbc-h2-font-size;
   font-size: unquote("min(max(3rem, 5vw), #{$tdbc-h2-font-size})");
+  color: tdbc-color("text");
 }
 
 h3,
 .tdbc-h3 {
   font-size: $tdbc-h3-font-size;
   font-size: unquote("min(max(2rem, 4vw), #{$tdbc-h2-font-size})");
+  color: tdbc-color("text");
 }
 
 h4,
 .tdbc-h4 {
   font-size: $tdbc-h4-font-size;
-  color: tdbc-color("gray");
+  color: tdbc-color("text");
 }
 
 p,
@@ -83,7 +86,7 @@ code {
   padding: 0.15em;
   background-color: tdbc-color("light");
   font-size: 0.75em;
-  color: tdbc-color("#5e081e");
+  color: tdbc-color("text");
   border: 1px solid scale-color(tdbc-color("gray"), $lightness: 50%);
   border-radius: 2px;
   line-height: 1.1;

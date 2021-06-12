@@ -1,7 +1,7 @@
 $tdbc-color-primary: #171392 !default;
-$tdbc-color-secondary: #db0a76 !default;
-$tdbc-color-background: #f9f9f9;
-$tdbc-font-color: #5e081e !default;
+$tdbc-color-secondary: #4d4a4c !default;
+$tdbc-color-background: #551010 !default;
+$tdbc-font-color: #f9f9f9 !default;
 
 $tdbc-brand-colors: (
   "primary": $tdbc-color-primary,
@@ -9,7 +9,7 @@ $tdbc-brand-colors: (
   "text": $tdbc-font-color
 ) !default;
 
-$tdbc-color-body: scale-color($tdbc-color-primary, $lightness: -30%, $saturation: -50%) !default;
+$tdbc-color-body: scale-color($tdbc-color-primary, $lightness: -40%, $saturation: -50%) !default;
 $tdbc-color-gray: mix(#767676, $tdbc-color-body, 70%) !default;
 
 $tdbc-colors: map-merge(
@@ -45,6 +45,7 @@ $tdbc-h3-font-size: 2rem !default;
 $tdbc-h4-font-size: 1.35rem !default;
 $tdbc-text-font-size: 1.15rem !default;
 $tdbc-lead-font-size: 1.35rem !default;
+$tdbc-font-color:"text";
 
 $tdbc-spacing: (
   sm: 1rem,

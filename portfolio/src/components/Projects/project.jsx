@@ -1,23 +1,35 @@
-import React from "react";
+import React, {Component} from "react";
+import MyProjects from "../Carousel";
+import { Container, Row, Col } from "react-bootstrap";
 
-import Carousel from "./carousel";
-import carouselContainer from "./carousel";
 
 
-export default class Project{
+export default class Projects extends Component{
     render(){
         return(
             
-            <div className = "background">
-                <h1 className = "h1"> Latest Projects</h1>
-                <div>
-                    <Carousel>
-                 <carouselContainer/>
-                    </Carousel>
-
-                   
-            </div>
-            </div>
+            <Container className="hr six">
+            <Row>
+              <Col md={7} className="hr six">
+               
+                
+              </Col>
+  
+              <Col md={100} style={{ paddingBottom:50 }} className = "main">
+              <div className ="contact-header" id = "my-projects">
+              <h2 style={{ paddingBottom: 5 }} className="tdbc-h2">
+                 Latest Projects</h2>
+                
+                </div>
+                <div style={{ padding: 20, textAlign: "center" }}>
+                    
+                 <MyProjects />
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        
+        
 
         );
     }

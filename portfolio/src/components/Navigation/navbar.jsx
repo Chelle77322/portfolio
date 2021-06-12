@@ -1,29 +1,35 @@
-import React from "react";
+import React , {Component} from "react";
 import About from "../About/About";
 import Projects from "../Projects/project";
 import Contact from "../Contact/Contact";
-
+import {WOW} from "wowjs";
 //import Footer from './footer.jsx';
 
 
-class Navbar extends React.Component {
+export default class Navbar extends Component {
   constructor(props){
-   super(props);
+    super(props);
     this.About = React.createRef();
     this.Projects = React.createRef();
     this.Contact = React.createRef();
     this.scrolling = this.scrolling.bind(this);
-  }
   
-  navEffect(){
+  }
+  componentDidMount(){
+    const wow = new WOW({live: false}); // disables sync requirement
+  wow.init()
+    
+  }
+navEffect(){
     window.addEventListener("scroll", () => {
-      var navBar = document.getElementById("navbar wrapper bar six");
+      var navBar = document.getElementById("navbar");
       var domRect = navBar.getBoundingClientRect();
-      var myBackground = document.getElementById("tdbc-main");
+      var myBackground = document.getElementById("hr six");
       var domBGRect = myBackground.getBoundingClientRect();
 
       if(domRect.y <= -domRect.height){
         navBar.classList.add("fade-in-nav");
+       
       }
       if (-domBGRect.height <domBGRect.top){
         navBar.classList.remove("fade-in-nav");
@@ -43,7 +49,7 @@ render() {
     <div> 
 <nav id ="navbar" className="navbar navbar-expand-lg navbar-light bg-light blend">
 <div className="container">
-<a href className="home-style navbar-brand" onClick={() => {
+<a href className="home-style navbar-brand tdbc-h2" onClick={() => {
 					window.scrollTo({ top: 0,behavior: "smooth"});}}> 
 						</a>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -53,49 +59,53 @@ render() {
 				aria-label="Toggle navigation">About</button>
 						<a href onClick={() => {this.scrolling(this.about);}}>
 						</a>
-                        </div>
-                        </div>
-                  
-					<div className="navbar-nav">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            <button className="navbar-toggler tdbc-h4" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false"
 				aria-label="Toggle navigation">Projects</button>
 						<a href onClick={() => {this.scrolling(this.Projects);}}>
 						</a>
-                        </div>
+                       
                         
                
-                        <div className="navbar-nav">
+                      
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false"
 				aria-label="Toggle navigation">Contact</button>
 						<a href onClick={() => {this.scrolling(this.Contact);}}>
 						</a>
-                        </div>
+                       
 						
-					</div>	
+					</div>
+                        </div>
+                        </div>
+                  
+				
+	
                     </nav>
     
-				<About
+                    <About
 					ref={this.About}
 					id="about-container"
-                    className = "tdbc-main"
-				
+					fadeOutRight={"wow fadeOutRight"}
+					fadeInLeft={"wow fadeInLeft"}
+					fadeInRight={"wow fadeInRight"}
+					fadeIn={"wow fadeIn"}
+					tada={"wow swing"}
 				/>
 				<Projects
 					ref={this.Projects}
 					id="my-projects"
-         className = "tdbc-main"
-					
+					fadeInRight={"wow fadeInRight"}
+					fadeIn={"wow fadeIn"}
 				/>
-			    <Contact
+				<Contact
 					ref={this.Contact}
 					id="my-contact"
-					className = "tdbc-main"
-                />
+					fadeInLeft={"wow fadeInLeft"}
+					shake={"wow pulse"}
+				/>
       
     </div>
   );
 }
 }
-export default Navbar;

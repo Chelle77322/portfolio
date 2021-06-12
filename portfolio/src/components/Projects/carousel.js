@@ -1,18 +1,14 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {Component} from "react";
-import ReactDom from "react-dom";
+import React, {useState, useEffect, Component} from "react";
 
-const carouselContainer = document.querySelector(".carousel-container");
 
-//Data for carousel
-const carouselSlidesData = [
+const slideWidth = 30;
+
+const _items = [
     {
         project: {
             title: "Catch Style Source",
             desc: 'A style selection website for the beginner web developer',
             image: "assets/projects/catch.jpg",
-            
             
         },
        
@@ -44,126 +40,64 @@ const carouselSlidesData = [
             desc: "An employment shift scheduling app for managers of casual and contract workers",
             image: "../assets/projects/reschedule.jpg",
         },
-    }
-
+    },
 ];
-class CarouselLeftArrow extends Component {
-    render() {
-        return(
-            <a href ="#" className = "carousel_arrow carousel_arrow--left"
-            onClick={this.props.onClick}>
-                <span className = "fa fa 2x fa-angle-left"/>
-            </a>
-        );
-    }
-} 
-class CarouselRightArrow extends Component {
-    render (){
-        return (
-            <a href = "#"
-            className = "carousel_arrow carousel_arrow--right"
-            onClick={this.props.onClick}>
-                <span className = "fa fa-2x fa-angle-right"/>
-            </a>
-        );
-    }
-} 
-class CarouselIndicator extends Component{
-    render(){
-        return(
-            <li>
-                <a className = {this.props.index === this.props.activeIndex ? "carousel_indicator carousel_indicator--active": "carousel_indicator"}
-                onClick={this.props.onClick}/>
-            </li>
-        );
-    }
-}
-class CarouselSlide extends Component {
-    render() {
-        return (
-            <li className = {this.props.index === this.props.activeIndex? "carousel_slide carousel_slide--active": "carousel_slide"}>
-                <div className = "carousel-slide_content">
-                    {this.props.slide.project}
-                </div>
-            </li>
-        );
-    }
-}
-//Wraps the Carousel Component all together
-class Carousel extends Component {
-    constructor(props){
-        super(props);
-    this.goToSlide = this.goToSlide.bind(this);
-    this.goToPrevSlide = this.goToPrevSlide.bind(this);
-    this.goToNextSlide = this.goToNextSlide.bind(this);
 
-    this.state = {
-        activeIndex: 0
+const length = _items.length;
+_items.push(..._items);
+
+// eslint-disable-next-line no-unused-vars
+const sleep = (ms = 0) => {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+};
+
+const createItem = (position, idx) => {
+    const item = {
+        styles: {
+            transform: `translateX(${position * slideWidth}rem)`,
+        },
+        player: _items[idx].player,
     };
-    }
-    gotToSlide(index){
-        this.setState({
-            activeIndex: index
-        });
-    }
-    goToPrevSlide(event){
-        event.preventDefault();
-        let index = this.state.activeIndex;
-        let { slides } = this.props;
-        let slidesLength = slides.length;
-        if (index <1){
-            index = slidesLength;
-        }
-        --index;
-        this.setState ({
-            activeIndex: index
-        });
-    }
-    goToNextSlide(event){
-        event.preventDefault();
-        let index = this.state.activeIndex;
-        let { slides } = this.props;
-        let slidesLength = slides.length -1;
 
-        if(index === slidesLength){
-            index = -1;
-        }
-    ++index;
-    this.setState({
-        activeIndex: index
-    });
-}
-render () {
+    switch (position) {
+        case length - 1:
+        case length + 1:
+            item.styles = {...item.styles, filter: 'grayscale(1)'};
+            break;
+        case length:
+            break;
+        default:
+            item.styles = {...item.styles, opacity: 0};
+            break;
+    }
+
+    return item;
+};
+
+const CarouselSlideItem = ({pos, idx, activeIdx}) => {
+    const item = createItem(pos, idx, activeIdx);
+
     return (
-        <div className = "carousel">
-            <CarouselLeftArrow onClick = {event => this.goToPrevSlide(event)}/>
-            <ul className = "carousel_slides">
-                {this.props.slides.map((slide, index)=>
-                <CarouselSlide
-                key= {index}
-                index = {index}
-                activeIndex = {this.state.activeIndex}
-                slide = {slide}/>
-                )}
-            </ul>
-
-            <CarouselRightArrow onClick = {event => this.goToNextSlide(event)} />
-            <ul className = "carousel_indicators">
-                {this.props.slides.map((slide, index) =>
-                <CarouselIndicator
-                key={index}
-                index={index}
-                activeIndex={this.state.activeIndex}
-                isActive={this.state.activeIndex === index}
-                onClick={event => this.goToSlide(index)}/>
-                )}
-            </ul>
-        </div>
+        <li className="carousel__slide-item" style={item.styles}>
+            <div className="carousel__slide-item-img-link">
+                <img src={item.player.image} alt={item.player.title} />
+            </div>
+            <div className="carousel-slide-item__body">
+                <h4>{item.player.title}</h4>
+                <p>{item.player.desc}</p>
+            </div>
+        </li>
     );
-}
-}
-//Renders the Carousel Component
-ReactDom.render(<Carousel slides = {carouselSlidesData}/>,
-    carouselContainer);
+};
 
-    export default Carousel;
+const keys = Array.from(Array(_items.length).keys());
+
+class Carousel extends Component{
+    componentDidMount() {
+        console.log("Components successfully mounted");
+        
+    }
+    
+
+}
+export default Carousel;

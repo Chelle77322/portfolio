@@ -1,32 +1,46 @@
 // stylelint-disable-next-line selector-max-type
-@import url('https://fonts.googleapis.com/css?family=Cabin Sketch&display=swap');
+@import url('https://fonts.googleapis.com/css?family=GFS Didot&display=swap');
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: tdbc-color("wrapper bar six");
+    min-height: 50vh;
+    background-image:url("../assets/background.jpeg");
     color: $tdbc-color-body;
     font-family: $tdbc-font-family;
+    fill-opacity: inherit;
   }
   
   // stylelint-disable selector-max-type, selector-no-qualifying-type
   main,
   main.tdbc-container {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    background-color: tdbc-color("wrapper bar six");
+    height:auto;
+      width: 100%;
+      background-image:url("../assets/background.jpeg");
+      color: white;
+      opacity: 1;
+      
+      font-size: 2em;
+      text-align: center;
+      line-height: 250px;
+      font-family: $tdbc-font-family;
+      color: $tdbc-font-color;
   }
+  
   
   footer {
     margin-top: auto;
+    background-image:url("../assets/background.jpeg");
   }
   
   article {
     max-width: 80ch;
   
     > img {
+      position:center;
       margin-right: auto;
       margin-left: auto;
+      height: 25%;
+      width: 25%;
     }
   }
   // stylelint-enable
@@ -34,10 +48,11 @@ body {
   .tdbc-container {
     display: flex;
     flex-direction: column;
-    max-width: 120ch;
+    max-width: fit-content;
     margin-right: auto;
     margin-left: auto;
     padding: 1rem;
+  
   }
   
   .tdbc-column-container {
@@ -74,6 +89,7 @@ body {
     padding-bottom: 0px;
     text-align: center;
     margin-top: 0 auto;
+    opacity: 0.75;
   }
   
   .tdbc-row {
@@ -98,5 +114,5 @@ body {
   hr {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    border: 1px solid tdbc-color("secondary");
+    border: 10px groove tdbc-color("secondary");
   }
