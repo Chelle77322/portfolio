@@ -5,8 +5,6 @@ import Home from "./components/Home/Home";
 import Navigate from "./components/Navigation/navbar";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/footer";
-
-
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Preloader from "./components/Pre";
 import "./styles/styles.scss";

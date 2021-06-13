@@ -16,8 +16,8 @@ export default class Main extends Component {
         this.slideshowHandle = this.props.config.autoplay && setInterval(function(){that.goToSlide(that.state.currentSlideIndex, false, true); }, this.props.config.idleTime);
     }
     goToSlide = (index, prev=false, next=false) => {
-        const that = this;
-        const totalProjects = this.props.config.data.length;
+        const that = this; 
+        const totalProjects = this.props.config.data.length; 
         const {infinite, tofro, idleTime, autoplay} = this.props.config;
         if(infinite) {
             if(next) {
@@ -49,7 +49,7 @@ export default class Main extends Component {
     }
     getSlideDots() {
         const dotsArray =[];
-        for(let i =0;i <this.props.config.data.length; i++){
+        for(let i =0;i <this.props.config.projectData.length; i++){
             dotsArray.push(<CarouselDot key={i} index={i} currentSlideIndex={this.state.currentSlideIndex} goToSlide={this.goToSlide}/>);
         }
         return dotsArray;

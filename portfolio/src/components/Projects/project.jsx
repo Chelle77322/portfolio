@@ -23,12 +23,13 @@ export default class Projects extends Component{
                 </div>
                 <div style={{ padding: 20, textAlign: "center" }}>
                     
-                 <MyProjects />
+                render( <MyProjects />, document.getElementById("my-projects"));
                 </div>
               </Col>
             </Row>
           </Container>
         
+
         
 
         );

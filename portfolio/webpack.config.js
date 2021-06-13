@@ -1,13 +1,13 @@
-const path = require('path');
+const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
-    template: path.join(__dirname, "portfolio/src/index.html"),
-    filename: "./index.html"
+    template: path.join("%PUBLIC_URL%/portfolio/"),
+    filename: "index.html"
 });
 module.exports = {
-    entry: path.join(__dirname, "portfolio/src/index.jsx"),
+    entry: path.join("%PUBLIC_URL%/portfolio/"),
     output: {
-        path: path.join(__dirname, "portfolio/dist"),
+        path: path.join("%PUBLIC_URL%/portfolio/build/"),
         filename: "bundle.js"
     },
     module: {
@@ -27,7 +27,10 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx"]
     },
+  
     devServer: {
-        port: 3000
+        historyApiFallback: true,
+        contentBase: '/',
+        port: 1011
     }
 };
