@@ -3,7 +3,7 @@ const db = require("../models");
 
 // This file empties the Posts collection and inserts the following posts below
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio/");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio");
 
 const postSeed = [
   {
@@ -29,8 +29,7 @@ const postSeed = [
   }
 ];
 
-db.Post.remove({})
-  .then(() => db.Post.collection.insertMany(bookSeed))
+db.Post.remove({}).then(() => db.Post.collection.insertMany(postSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
