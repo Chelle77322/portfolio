@@ -13,52 +13,37 @@ export default class Contact extends Component{
         
         <Container className="hr six">
           <Row>
-            <Col md={7} className="hr six">
-             
-              
-            </Col>
 
-      <Col md={100} style={{ paddingBottom:50 }} className = "main">
+      <Col md={100} style={{ paddingBottom:50 }} className = "tdbc-main">
             <div className ="contact-header" id = "my-contact">
             <h2 style={{ paddingBottom: 5 }} className="tdbc-h2">
                Contact</h2>
               
               </div>
               <div style={{ padding: 20, textAlign: "center" }}>
-              <p className = "tdbc-h4">Interested in working with me or finding out more about what I can do?<br/>
+              <p className = "tdbc-lead">Interested in working with me or finding out more about what I can do?
              Feel free to reach out to me on the socials below </p>
-                  
-               
               </div>
-              <Card>
-              <img src={Profile} height = "25%" width = "25%" alt="Web Developer's Avatar"/>;</Card>
-  <Col md={100} style={{ paddingBottom:50 }} className = "main">
+             
+             
+  <Col md={100} style={{ paddingBottom:50 }} className ="tdbc-main">
+  <Card>
   <div className ="tdbc-card">
-
-   
+  <img src={Profile} className = "img:first-child" alt="Web Developer's Avatar"/>;
+   </div>
     <div className ="tdbc-card">
-    
-   
-  
-    
-
-    <div className="card-user-bio">
-      <h3 className = "tdbc-h3">Michelle Hall</h3>
-      <p className = "tdbc-h5">UX/UI ,Full-Stack Web Developer, Responsive Design, HTML5, SCSS Framework, SASS, NodeJS, ReactJS JQuery, Ajax, Express, Mongoose, Heroku,Agile Software Development </p>
-      <span className="location"><span className="location-icon fa fa-map-marker"></span><span className="location-text">Adelaide, South Australia</span></span>
+    <h3 className = "tdbc-card__title">Michelle Hall</h3>
+      <p className = "lead">UX/UI ,Full-Stack Web Developer, Responsive Design, HTML5, SCSS Framework, SASS, NodeJS, ReactJS JQuery, Ajax, Express, Mongoose, Heroku,Agile Software Development </p>
+      <span className="location"><span className="location-icon fa fa-map-marker p"></span><span className="lead">Adelaide, South Australia</span></span>
     </div>
-        <div className="rounded-social-buttons">
+        <div className="rounded-social-buttons tdbc-card">
         <a className="social-button linkedin" href="https://www.linkedin.com/in/michelle-hall-08021434/"><i className="fab fa-linkedin"></i></a>
         <a className="social-button github" href="https://github.com/Chelle77322/"><i className="fab fa-github"></i></a>
     
     </div>
-     <Card>
-      <div className="card-user-button">
-        <a href="https://github.com/Chelle77322/" className="hollow button">FOLLOW</a>
-      </div>
-      </Card>
-</div>
-</div>
+
+    </Card>
+
               </Col>
             </Col>
           </Row>

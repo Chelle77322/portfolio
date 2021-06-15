@@ -56,21 +56,19 @@ render() {
 						</a>
                         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div className="navbar-nav">
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    <button className="tdbc-button" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false"
 				aria-label="Toggle navigation">About</button>
 						<a href onClick={() => {this.scrolling(this.About);}}>
 						</a>
-            <button className="navbar-toggler tdbc-h4" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            <button className="tdbc-button" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false"
 				aria-label="Toggle navigation">Projects</button>
 						<a href onClick={() => {this.scrolling(this.Projects);}}>
 						</a>
                        
                         
-               
-                      
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        <button className="tdbc-button" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false"
 				aria-label="Toggle navigation">Contact</button>
 						<a href onClick={() => {this.scrolling(this.Contact);}}>

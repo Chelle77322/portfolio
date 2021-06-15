@@ -9,8 +9,8 @@
     transition: 180ms ease-in-out;
     transition-property: background, border;
     border-radius: $tdbc-border-radius/2;
-    background-color: tdbc-color("primary");
-    color: #fff;
+    background-color: "six";
+    color: $tdbc-ink-colors("text");
     font-size: 1.125rem;
     line-height: 1.1;
     text-align: center;

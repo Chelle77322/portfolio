@@ -42,10 +42,12 @@ h4,
 p,
 li {
   font-size: $tdbc-text-font-size;
+  color: tdbc-color("text");
 }
 
 p {
   margin: 0 0 1rem;
+  color: tdbc-color("text");
 }
 
 article {
@@ -69,6 +71,7 @@ article {
 
 strong {
   font-weight: $tdbc-strong-font-weight;
+  color: tdbc-color("text");
 }
 
 a:not(.tdbc-button) {
@@ -79,6 +82,7 @@ pre,
 code {
   font-family: "Cabin Sketch", "sans-serif";
   font-weight: bold;
+  color: tdbc-color("text");
 }
 
 code {

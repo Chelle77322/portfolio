@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
 import catchs from "./../assets/projects/catch.jpg";
 import notetaker from "./../assets/projects/notetaker.jpg";
 import reschedule from "./../assets/projects/reschedule.jpg";
@@ -10,38 +11,31 @@ import bookle from "./../assets/projects/bookle.jpg";
  const projectData = [
        {
            "src": catchs,
-            "link": "https://chelle77322.github.io/Catch-Source-Style/",
-            "caption": "Catch Style Source; A style selection tool"
+            "caption":<a href = "https://chelle77322.github.io/Catch-Source-Style/">Catch Style Source; A style selection tool</a> 
         },
         {
             "src":notetaker,
-            "link":"https://polar-tor-09641.herokuapp.com/",
-            "caption": "NoteTaker: A useful note taking web app"
+            "caption": <a href ="https://polar-tor-09641.herokuapp.com/" >NoteTaker: A useful note taking web app</a>
         },
         {
             "src":scheduler,
-            "link":"https://chelle77322.github.io/weekly_organiser/",
-            "caption": "Scheduler: An online daily planner for the work day"
+            "caption": < a href = "https://chelle77322.github.io/weekly_organiser/"> Scheduler: An online daily planner for the work day</a>
         },
         {
             "src":budgetary,
-            "link":"https://glacial-shore-08840.herokuapp.com/",
-            "caption": "Budgetary: A little budget app"
+            "caption":< a href = "https://glacial-shore-08840.herokuapp.com/" >Budgetary: A little budget app</a> 
         },
         {
             "src":reschedule,
-            "link":"http://reschedule-app.herokuapp.com/",
-            "caption": "RESchedule: An employment workforce app"
+            "caption": <a href = "http://reschedule-app.herokuapp.com/"> RESchedule: An employment workforce app</a>
         },
         {
-           "src":fitness,
-            "link":"https://powerful-island-01473.herokuapp.com/",
-            "caption": "Keeping Fit: A little fitness tracker"
+           "src":fitness,    
+            "caption":<a href = "https://powerful-island-01473.herokuapp.com/">Keeping Fit: A little fitness tracker</a>  
         },
         {
             "src":bookle,
-            "link":"https://novelseeker.herokuapp.com/",
-            "caption":"Bookle: A React Search App"
+            "caption":<a href = "https://novelseeker.herokuapp.com">Bookle: A React Search App</a>
         }
 
     ]

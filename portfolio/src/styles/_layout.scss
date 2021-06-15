@@ -7,7 +7,7 @@ body {
     background-image:url("../assets/background.jpeg");
     color: $tdbc-color-body;
     font-family: $tdbc-font-family;
-    fill-opacity: inherit;
+  
   }
   
   // stylelint-disable selector-max-type, selector-no-qualifying-type
@@ -16,8 +16,8 @@ body {
     height:auto;
       width: 100%;
       background-image:url("../assets/background.jpeg");
-      color: white;
-      opacity: 1;
+      color: rgb(121, 11, 102);
+      opacity: 0.65;
       
       font-size: 2em;
       text-align: center;
@@ -39,8 +39,8 @@ body {
       position:center;
       margin-right: auto;
       margin-left: auto;
-      height: 25%;
-      width: 25%;
+      height: 60ch;
+      width: 40ch;
     }
   }
   // stylelint-enable
@@ -89,7 +89,7 @@ body {
     padding-bottom: 0px;
     text-align: center;
     margin-top: 0 auto;
-    opacity: 0.75;
+    opacity: 1;
   }
   
   .tdbc-row {

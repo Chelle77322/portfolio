@@ -1,11 +1,11 @@
 .tdbc-card {
     display: flex;
-    position: relative;
+    position: center;
     flex-direction: column;
-    width: 50%;
+    width: 40ch;
     border-radius: $tdbc-border-radius;
    
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.18);
   
     &__title {
       margin-bottom: 1rem;
