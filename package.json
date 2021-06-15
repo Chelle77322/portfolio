@@ -6,9 +6,9 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": " node index.js",
-    "start:dev": "concurrently \"nodemon --ignore 'portfolio/*'\"\"npm run /portfolio\"",
-    "seed": "node scripts/seedDB.js",
+    "start:dev": "concurrently \"nodemon --ignore 'portfolio/*'\"\"npm run portfolio\"",
     "portfolio": "cd portfolio && npm run start",
+    "seed": "node scripts/seedDB.js",
     "install": "cd portfolio && npm install",
     "build": "cd portfolio/ && npm run build",
     "heroku-postbuild": "npm run build"
