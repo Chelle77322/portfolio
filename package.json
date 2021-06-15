@@ -10,8 +10,9 @@
     "seed": "node scripts/seedDB.js",
     "portfolio": "cd portfolio && npm run start",
     "install": "cd portfolio && npm install",
-    "build": "cd portfolio && npm run build",
+    "build": "cd portfolio/ && npm run build",
     "heroku-postbuild": "npm run build"
+  
   },
   "author": "Michelle Hall",
   "license": "MIT",
