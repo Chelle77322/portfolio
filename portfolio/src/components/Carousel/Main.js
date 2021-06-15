@@ -5,15 +5,16 @@ import CarouselPrevBtn from './CarouselPrevBtn';
 
 import "../../styles/styles.scss";
 
-// eslint-disable-next-line import/no-anonymous-default-export
+
 export default class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {currentSlideIndex:0, forward: true, backward: false};
     }
     componentDidMount () {
-        const that = this;
-        this.slideshowHandle = this.props.config.autoplay && setInterval(function(){that.goToSlide(that.state.currentSlideIndex, false, true); }, this.props.config.idleTime);
+        const that = this; 
+       this.slideshowHandle = this.props.config.autoplay && setInterval(function(){that.goToSlide(that.state.currentSlideIndex, false, true); }, this.props.config.idleTime);
+       console.log("Slideshow components loaded successfully" + that);
     }
     goToSlide = (index, prev=false, next=false) => {
         const that = this; 
@@ -49,7 +50,7 @@ export default class Main extends Component {
     }
     getSlideDots() {
         const dotsArray =[];
-        for(let i =0;i <this.props.config.projectData.length; i++){
+        for(let i =0;i <this.props.config.data.length; i++){
             dotsArray.push(<CarouselDot key={i} index={i} currentSlideIndex={this.state.currentSlideIndex} goToSlide={this.goToSlide}/>);
         }
         return dotsArray;
@@ -57,12 +58,12 @@ export default class Main extends Component {
     render() {
         const {data, infinite, showCaption, showSlideNum, showDots, showArrows} = this.props.config;
         return(<div>
-        <div className="container">
-            {
-            showSlideNum && <div className='numbertext'>{this.state.currentSlideIndex+1} / {data.length}</div>}
-        <img className='img-container' src={data[this.state.currentSlideIndex].src} alt="Snow"/>
-       
+        <div className="my-project">
+            { showSlideNum && <div className='numbertext'>{this.state.currentSlideIndex+1} / {data.length}</div>}
+           
+        <img className='img-container' src = {data[this.state.currentSlideIndex].src} alt="Snow"/>
         
+       
         {
             (showArrows === 'both' || showArrows === 'prev') && (infinite || this.state.currentSlideIndex > 0) && <CarouselPrevBtn goToSlide={this.goToSlide} index ={this.state.currentSlideIndex}/>
         }

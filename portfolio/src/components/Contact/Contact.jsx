@@ -30,7 +30,8 @@ export default class Contact extends Component{
                   
                
               </div>
-              <img src={Profile} height = "25%" width = "25%" alt="Web Developer's Avatar"/>;
+              <Card>
+              <img src={Profile} height = "25%" width = "25%" alt="Web Developer's Avatar"/>;</Card>
   <Col md={100} style={{ paddingBottom:50 }} className = "main">
   <div className ="tdbc-card">
 

@@ -22,9 +22,11 @@ const [load, updateLoad] = useState(true);
    <div className = " hr six" id = {load ? "no-scroll": "scroll"}>
      
    <Switch>
-     <Route path = "/Projects" component = {Projects}/>
-       <Route path = "/About" component = {About}/>
-       <Route path = "/Contact" component = {Contact} />
+     <Route exact path = "/" component = {Home}/>
+     <Route exact path = "/Projects" component = {Projects}/>
+       <Route  exact path = "/About" component = {About}/>
+       <Route  exact path = "/Contact" component = {Contact} />
+       
       
 
 

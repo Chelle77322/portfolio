@@ -1,5 +1,6 @@
 import React , {Component} from "react";
 import About from "../About/About";
+import Home from "../Home/Home"
 import Projects from "../Projects/project";
 import Contact from "../Contact/Contact";
 import {WOW} from "wowjs";
@@ -9,6 +10,7 @@ import {WOW} from "wowjs";
 export default class Navbar extends Component {
   constructor(props){
     super(props);
+    this.Home = React.createRef();
     this.About = React.createRef();
     this.Projects = React.createRef();
     this.Contact = React.createRef();
@@ -57,7 +59,7 @@ render() {
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false"
 				aria-label="Toggle navigation">About</button>
-						<a href onClick={() => {this.scrolling(this.about);}}>
+						<a href onClick={() => {this.scrolling(this.About);}}>
 						</a>
             <button className="navbar-toggler tdbc-h4" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
 				aria-controls="navbarNavAltMarkup" aria-expanded="false"

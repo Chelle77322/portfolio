@@ -1,12 +1,13 @@
 import React from 'react';
-import projectData from "../data/mockData";
+import projectData from"../data/mockData"
 import Main from "./Carousel/Main";
 import "../styles/styles.scss";
 import "../styles/_carousel.scss";
-const MyProjects = (props) => {
+
+export default function MyProjects (props){
    
-    const config = props.config || {
-        "data": projectData.data,
+    const myConfig = props.config || {
+        "data": projectData,
         "infinite": true, 
         "tofro" : false, 
         "autoplay": false, 
@@ -16,6 +17,7 @@ const MyProjects = (props) => {
         "showDots": true,
         "showArrows": 'both'
     };
-    return <Main config={config}/>
+   
+    return <Main config={myConfig}/>
+    
 };
-export default MyProjects;

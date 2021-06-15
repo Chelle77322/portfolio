@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import MyProjects from "../Carousel";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col} from "react-bootstrap";
 
 
 
@@ -23,7 +23,7 @@ export default class Projects extends Component{
                 </div>
                 <div style={{ padding: 20, textAlign: "center" }}>
                     
-                render( <MyProjects />, document.getElementById("my-projects"));
+               <MyProjects />
                 </div>
               </Col>
             </Row>
