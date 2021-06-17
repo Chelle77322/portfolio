@@ -5,7 +5,9 @@ body {
     flex-direction: column;
     min-height: 50vh;
     background-image:url("../assets/background.jpeg");
-    color: $tdbc-color-body;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity:1;
     font-family: $tdbc-font-family;
   
   }
@@ -16,12 +18,14 @@ body {
     height:auto;
       width: 100%;
       background-image:url("../assets/background.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
       color: rgb(121, 11, 102);
       opacity: 0.65;
-      
+      margin-top: 10px;
       font-size: 2em;
       text-align: center;
-      line-height: 250px;
+      line-height: 100px;
       font-family: $tdbc-font-family;
       color: $tdbc-font-color;
   }
@@ -30,6 +34,7 @@ body {
   footer {
     margin-top: auto;
     background-image:url("../assets/background.jpeg");
+    
   }
   
   article {
@@ -59,6 +64,7 @@ body {
     margin-right: auto;
     margin-left: auto;
     padding: 1rem;
+
   
   }
   
@@ -75,15 +81,16 @@ body {
   
   .tdbc-section {
     width: 100%;
+    height: auto;
   
     &--padded {
-      padding-top: 10vh;
-      padding-bottom: 10vh;
+      padding-top: 1vh;
+      padding-bottom: 1vh;
     }
   
     // stylelint-disable-next-line selector-max-universal
     *:last-child {
-      margin-bottom: 0;
+      margin-bottom: 10vh;
     }
   }
   
@@ -101,7 +108,7 @@ body {
   
   .tdbc-row {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 2.25rem;
     align-self: center;
     place-content: center;
   

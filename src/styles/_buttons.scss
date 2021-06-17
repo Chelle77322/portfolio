@@ -7,15 +7,15 @@
     min-height: 44px;
     padding: 0.25em 1em;
     transition: 180ms ease-in-out;
-    transition-property: background, border;
     border-radius: $tdbc-border-radius/2;
-    background-color: "six";
-    color: $tdbc-ink-colors("text");
+    background-color:#550d37;
+    color:#c6c6d4;
     font-size: 1.125rem;
     line-height: 1.1;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
+    opacity:1;
   
     @media screen and (-ms-high-contrast: active) {
       border: 2px solid currentColor;
@@ -58,12 +58,12 @@
   
     &-outlined {
       border: 2px solid tdbc-color("primary");
-      background-color: transparent;
-      color: tdbc-color("primary");
+      background-color: multiply;
+      color: tdbc-color("hr six");
   
       &:hover,
       &:focus {
-        background-color: scale-color(tdbc-color("primary"), $lightness: 80%);
+        background-color: scale-color(tdbc-color("secondary"), $lightness: 80%);
       }
     }
   
