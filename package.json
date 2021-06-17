@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:1011/",
+  
   "homepage": "https://chelle77322.github,io/portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
